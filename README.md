@@ -15,7 +15,7 @@ Current amphtml-validator version: **1.0.23**
 **How to use AMP HTML Validator extension**
 
 After installing the extension from
-[VS Code Marketplace](https://marketplace.visualstudio.com/VSCode), the
+[VS Code Marketplace](https://marketplace.visualstudio.com/VSCode) [coming soon], the
 extension is activated when `HTML` file is opened. If extension finds one of
 the AMP specific attributes(shown below) defined in <html> tag, executes the
 AMP HTML validator for the document and renders the errors/warnings as
