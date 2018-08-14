@@ -1,0 +1,68 @@
+{
+  "name": "amphtml-validator",
+  "description": "VSCode extension for AMP HTML validator",
+  "author": "Dipak Parikh",
+  "license": "Apache-2.0",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diparikh-project/vscode-amphtml-validator"
+  },
+  "homepage": "https://github.com/diparikh-project/vscode-amphtml-validator/README.md",
+  "bugs": {
+    "url": "https://github.com/diparikh-project/vscode-amphtml-validator/issues",
+    "email": "dipak.parikh@gmail.com"
+  },
+  "publisher": "amphtml",
+  "categories": [
+    "Linters"
+  ],
+  "engines": {
+    "vscode": "^1.23.0"
+  },
+  "activationEvents": [
+    "onLanguage:html"
+  ],
+  "main": "./client/out/extension",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "AMPHTML validator configuration",
+      "properties": {
+        "amphtml.validator.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Control whether AMP HTML validator is enabled for HTML files or not."
+        },
+        "amphtml.validator.documentSelector": {
+          "type": "array",
+          "default": [
+            "html",
+            "htm"
+          ],
+          "description": "The associated AMP HTML document types to be linted."
+        },
+        "amphtml.validator.keepIssuesAfterDocumentClose": {
+          "type": "boolean",
+          "default": true,
+          "description": "Control whether AMP HTML validator errors/warnings are cleared when document is closed."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
+    "compile:client": "tsc -p ./client/tsconfig.json",
+    "compile:server": "tsc -p ./server/tsconfig.json",
+    "watch:client": "tsc -w -p ./client/tsconfig.json",
+    "watch:server": "tsc -w -p ./server/tsconfig.json",
+    "compile": "npm run compile:client && npm run compile:server",
+    "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+    "test": "sh ./scripts/e2e.sh"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.0",
+    "@types/node": "^8.0.0",
+    "typescript": "2.8.3"
+  }
+}
