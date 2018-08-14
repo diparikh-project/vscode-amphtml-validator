@@ -45,10 +45,6 @@ export function activate(context: ExtensionContext) {
 
   // Get file types to lint from user settings.
   // TODO(diparikh): Implement amphtml.validator.documentSelector setting.
-    //let config = workspace.getConfiguration('amphtml.validator');
-    //let languages: string[] = config.get('documentSelector');
-    //let documentSelector =
-    //    languages.map(language => ({ language, scheme: 'file' }));
   let documentSelector = [{language: 'html', scheme: 'file'}];
 
   let serverOptions: ServerOptions = {

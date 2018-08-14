@@ -114,8 +114,10 @@ connection.onDidChangeConfiguration(change => {
     }
   }
 
-  // Revalidate all open  documents.
-  documents.all().forEach(validateDocument);
+  if (globalSettings.enabled) {
+    // Revalidate all open  documents.
+    documents.all().forEach(validateDocument);
+  }
 });
 
 /**
@@ -210,7 +212,6 @@ async function validateDocument(textDocument: TextDocument): Promise<void> {
  */
 function cleanupDiagnostics() {
   let diagnostics: Diagnostic[] = [];
-  connection.sendNotification("AMPHTML.VALIDATION", [[]]);
   return diagnostics;
 }
 
