@@ -337,7 +337,7 @@ describe('Should get diagnostics for invalid attributes in ⚡4ads form', () => 
       }
     ])
   })
-});
+})
 
 describe('Should get diagnostics for invalid scripts in ⚡4ads', () => {
   const docUri = getDocUri('amp4ads/no-script.html')
@@ -402,7 +402,7 @@ describe('Should get diagnostics for invalid scripts in ⚡4ads', () => {
       }
     ])
   })
-});
+})
 
 describe('Should get diagnostics for ⚡4ads pixel ssr', () => {
   const docUri = getDocUri('amp4ads/amp-pixel-ssr.html')
@@ -418,7 +418,254 @@ describe('Should get diagnostics for ⚡4ads pixel ssr', () => {
       }
     ])
   })
-});
+})
+
+describe('Should get diagnostics for invalid extensions in ⚡4ads page', () => {
+  const docUri = getDocUri('amp4ads/extensions.html')
+
+  it('Diagnoses ⚡4ads validation errors', async () => {
+    await testDiagnostics(docUri, [
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(33, 2, 33, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(37, 2, 37, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(47, 2, 47, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(49, 2, 49, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(53, 2, 53, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(55, 2, 55, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(57, 2, 57, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(59, 2, 59, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(67, 2, 67, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(69, 2, 69, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(71, 2, 71, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(73, 2, 73, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(75, 2, 75, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(77, 2, 77, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(79, 2, 79, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(83, 2, 83, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(85, 2, 85, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(87, 2, 87, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(89, 2, 89, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(91, 2, 91, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(93, 2, 93, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(95, 2, 95, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(99, 2, 99, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(101, 2, 101, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(103, 2, 103, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(105, 2, 105, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(107, 2, 107, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(109, 2, 109, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'Custom JavaScript is not allowed. : https://www.ampproject.org/docs/reference/spec#html-tags',
+        range: toRange(111, 2, 111, 7),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'DISALLOWED_SCRIPT_TAG'
+      },
+      {
+        message: 'The extension \'amp-animation\' was found on this page, but is unused. Please remove this extension.',
+        range: toRange(119, 20, 119, 25),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'EXTENSION_UNUSED'
+      },
+      {
+        message: 'The extension \'amp-lightbox\' was found on this page, but is unused. Please remove this extension.',
+        range: toRange(119, 20, 119, 25),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'EXTENSION_UNUSED'
+      },
+      {
+        message: 'The extension \'amp-mustache\' was found on this page, but is unused. Please remove this extension.',
+        range: toRange(119, 20, 119, 25),
+        severity: vscode.DiagnosticSeverity.Error,
+        source: '⚡4ads',
+        code: 'EXTENSION_UNUSED'
+      },
+      {
+        message: 'Doctype must be declared first.',
+        range: toRange(0, 0, 0, 4),
+        severity: vscode.DiagnosticSeverity.Warning,
+        source: null,
+        code: 'doctype-first'
+      },
+      {
+        message: '<title> must be present in <head> tag.',
+        range: toRange(118, 0, 118, 7),
+        severity: vscode.DiagnosticSeverity.Warning,
+        source: null,
+        code: 'title-require'
+      }
+    ])
+  })
+})
 
 describe('Should get diagnostics for invalid attributes in ⚡4email form', () => {
   const docUri = getDocUri('amp4email/amp-form.html')
@@ -497,7 +744,7 @@ describe('Should get diagnostics for invalid attributes in ⚡4email form', () =
       }
     ])
   })
-});
+})
 
 function toRange(sLine: number, sChar: number, eLine: number, eChar: number) {
   const start = new vscode.Position(sLine, sChar)
@@ -509,6 +756,7 @@ async function testDiagnostics(docUri: vscode.Uri, expectedDiagnostics: vscode.D
   await activate(docUri)
 
   const actualDiagnostics = vscode.languages.getDiagnostics(docUri)
+  console.log(actualDiagnostics)
   assert.equal(actualDiagnostics.length, expectedDiagnostics.length)
 
   expectedDiagnostics.forEach((expectedDiagnostic, i) => {
