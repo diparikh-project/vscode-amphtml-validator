@@ -27,12 +27,12 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "AMPHTML validator configuration",
+      "title": "AMPHTML validator configuration: **NOT IMPLEMENTED**",
       "properties": {
         "amphtml.validator.enabled": {
           "type": "boolean",
           "default": true,
-          "description": "Control whether AMP HTML validator is enabled for HTML files or not."
+          "description": "*NOT IMPLEMENTED* Control whether AMP HTML validator is enabled for HTML files or not."
         },
         "amphtml.validator.documentSelector": {
           "type": "array",
@@ -40,12 +40,12 @@
             "html",
             "htm"
           ],
-          "description": "The associated AMP HTML document types to be linted."
+          "description": "*NOT IMPLEMENTED* The associated AMP HTML document types to be linted."
         },
         "amphtml.validator.keepIssuesAfterDocumentClose": {
           "type": "boolean",
           "default": true,
-          "description": "Control whether AMP HTML validator errors/warnings are cleared when document is closed."
+          "description": "*NOT IMPLEMENTED* Control whether AMP HTML validator errors/warnings are cleared when document is closed."
         }
       }
     }

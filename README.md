@@ -1,7 +1,8 @@
 # Visual Studio Code extension for AMP HTML ⚡ Validator
 
-This extension makes authoring AMP HTML documents easy by validating for
-errors as you type. The **PROBLEMS** (View->Problems) pane renders the
+This extension makes authoring AMP HTML documents, easy by validating for
+errors as you type within Visual Studio Code editor.
+The **PROBLEMS** (View->Problems) pane renders the
 AMP HTML validation error/warning messages with the row and column number in
 the document from where error/warning were reported.
 
@@ -15,9 +16,9 @@ Current amphtml-validator version: **1.0.23**
 **How to use AMP HTML Validator extension**
 
 After installing the extension from
-[VS Code Marketplace](https://marketplace.visualstudio.com/VSCode) [coming soon], the
+[VS Code Marketplace](https://marketplace.visualstudio.com/VSCode)[coming soon], the
 extension is activated when `HTML` file is opened. If extension finds one of
-the AMP specific attributes(shown below) defined in <html> tag, executes the
+the AMP specific attributes(shown below) defined in `<html>` tag, executes the
 AMP HTML validator for the document and renders the errors/warnings as
 reported by validator in the **PROBLEMS** pane, if any.
 
@@ -35,7 +36,7 @@ Full list of valid amp attributes are:
 All AMP HTML validator Errors/Warnings are reported in **PROBLEMS** view
 (Open the pane by `View->Problems`, if not already opened).
 
-Issues are removed from the **PROBLEMS** pane when issue is fixed.
+Issues are removed from the **PROBLEMS** pane when fixed in the editor.
 
 Each AMP HTML validation error/warning row has 3 parts as under:
 
@@ -58,12 +59,6 @@ number of errors/warnings includes `AMP HTML`, `HTML` and `CSS`
 errors/warnings. This may also include errors/warnings reported by other
 extensions.
 
-For this extension, Errors/Warnings are kept in the **PROBLEMS**  pane
-if the settings configuration is set as
-`"amphtml.validator.keepIssuesAfterDocumentClose": true` for files once
-opened but currently closed within current session, otherwise AMP HTML
-validator errors/warnings are removed on document close.
-
 ## Sample AMP HTML Validator extension in action
 
 ![Validator extension in action](./image/amp-intro.png)
@@ -72,17 +67,6 @@ The above screenshot renders the **PROBLEMS** pane with all errors/warnings
 across all open files. The `file explorer` also renders the numbers of
 errors shown next to the file name.
 (Red indicates errors, Green indicates warnings).
-
-## Settings/Configurations
-
-Settings are available to change how this extension responds.
-(Use Code->Preferences->Settings to activate VS Code settings editor)
-
-Enable/Disable AMP HTML validation without uninstall
-* `"amphtml.validator.enabled": true|false` // Default: `true`
-
-Keep/Remove AMP HTML validation errors after closing the document
-* `"amphtml.validator.keepIssuesAfterDocumentClose": false` //Default:`true`
 
 # FAQ
 
