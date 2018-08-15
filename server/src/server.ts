@@ -70,96 +70,6 @@ connection.onInitialized(() => {
 });
 
 /**
- * Settings defined in package.json (contributes.configuration).
- */
-interface AmpHtmlSettings {
-  enabled: boolean;
-  keepIssuesAfterDocumentClose: boolean;
-  documentSelector: string[];
-}
-
-let globalSettings: AmpHtmlSettings;
-
-// Cache the settings of all open documents.
-let documentSettings: Map<string, Thenable<AmpHtmlSettings>> = new Map();
-
-// Keep track of documents once opened but now closed.
-// Used only when setting 'keepIssuesAfterDocumentClose' is disabled, to clear
-// any open diagnostics.
-let closedDocuments: Set<string> = new Set();
-
-/**
- * Checks for configuration changes and if required (based on settings),
- * revalidates all open documents.
- * @param change
- */
-connection.onDidChangeConfiguration(change => {
-  if (change.settings) {
-    globalSettings = <AmpHtmlSettings>(
-      (change.settings.amphtml.validator)
-    );
-  }
-
-  if (!globalSettings.keepIssuesAfterDocumentClose || !globalSettings.enabled) {
-    documents.all().forEach((document) => {
-      let diagnostics: Diagnostic[] = [];
-      connection.sendDiagnostics({ uri: document.uri.toString(), diagnostics });
-      documentSettings.delete(document.uri);
-    });
-
-    const closedDocs = closedDocuments.keys();
-    for (const closedDoc of closedDocs) {
-      let diagnostics: Diagnostic[] = [];
-      connection.sendDiagnostics({ uri: closedDoc, diagnostics });
-    }
-  }
-
-  if (globalSettings.enabled) {
-    // Revalidate all open  documents.
-    documents.all().forEach(validateDocument);
-  }
-});
-
-/**
- * Reads the settings from 'configuration' for 'amphtml.validator'
- * @param resource
- */
-function getDocumentSettings(resource: string): Thenable<AmpHtmlSettings> {
-  if (!hasConfigurationCapability) {
-    return Promise.resolve(globalSettings);
-  }
-  let result = documentSettings.get(resource);
-  if (!result) {
-    result = connection.workspace.getConfiguration({
-      scopeUri: resource,
-      section: 'amphtml.validator'
-    });
-    documentSettings.set(resource, result);
-  }
-  return result;
-}
-
-/**
- * When document is opened, clear previously stored reference if any.
- * @param event
- */
-documents.onDidOpen(event => {
-  closedDocuments.delete(event.document.uri);
-});
-
-/**
- * Only keep settings for open documents.
- * @param event
- */
-documents.onDidClose(event => {
-  if (!globalSettings.keepIssuesAfterDocumentClose || !globalSettings.enabled) {
-    cleanupDiagnostics();
-    documentSettings.delete(event.document.uri);
-  }
-  closedDocuments.add(event.document.uri);
-});
-
-/**
  * The content of the document has changed. This event is emitted
  * when the document is first opened or when its content has changed.
  * @param change
@@ -173,17 +83,6 @@ documents.onDidChangeContent(change => {
  * @param textDocument
  */
 async function validateDocument(textDocument: TextDocument): Promise<void> {
-  // In this simple example we get the settings for every validate run.
-  let settings = await getDocumentSettings(textDocument.uri);
-
-  // If extension is disabled (property 'AmpHtmlValidator.enabled == false'),
-  // clean-up any previous issues.
-  if (!settings.enabled) {
-    cleanupDiagnostics();
-    documentSettings.delete(textDocument.uri);
-    return;
-  }
-
   const text = textDocument.getText();
 
   const uri = textDocument.uri.toString();
