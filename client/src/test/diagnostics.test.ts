@@ -193,6 +193,38 @@ describe('Should skip non-amp page', () => {
   })
 })
 
+describe('Should skip non-amp page invalid-attr1.html', () => {
+  const docUri = getDocUri('amp/invalid-attr1.html')
+
+  it ('Skips NON AMP HTML page', async () => {
+    await testDiagnostics(docUri, [
+      {
+        message: 'Doctype must be declared first.',
+        range: toRange(0, 0, 0, 4),
+        severity: vscode.DiagnosticSeverity.Warning,
+        source: null,
+        code: 'doctype-first'
+      }
+    ])
+  })
+})
+
+describe('Should skip non-amp page invalid-attr2.html', () => {
+  const docUri = getDocUri('amp/invalid-attr2.html')
+
+  it ('Skips NON AMP HTML page', async () => {
+    await testDiagnostics(docUri, [
+      {
+        message: 'Doctype must be declared first.',
+        range: toRange(0, 0, 0, 4),
+        severity: vscode.DiagnosticSeverity.Warning,
+        source: null,
+        code: 'doctype-first'
+      }
+    ])
+  })
+})
+
 describe('Should get diagnostics for invalid attributes and tags in AMP page', () => {
   const docUri = getDocUri('amp/amp-invalid-amp-list.html')
 

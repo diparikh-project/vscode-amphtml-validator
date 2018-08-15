@@ -40,7 +40,7 @@ interface AmpDoc {
  */
 export function isAmpHtmlDocument(textDocument: TextDocument): AmpDoc {
   const ampPattern =
-      /.*?<html\s+.*?(⚡4ads|amp4ads|⚡4email|amp4email|amp|⚡){1}(\s+|>|=)/gi;
+      /.*?<html\s*.*?\s+(⚡4ads|amp4ads|⚡4email|amp4email|amp|⚡){1}(\s+|>|=)/gi;
 
   // Remove all comments, which might include <html> tag.
   // Non-greedy pattern to capture nested comments.
