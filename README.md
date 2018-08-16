@@ -1,8 +1,8 @@
 # Visual Studio Code extension for AMP HTML ⚡ Validator
 
 This extension makes authoring AMP HTML documents, easy by validating for
-errors as you type within Visual Studio Code editor.
-The **PROBLEMS** (View->Problems) pane renders the
+errors/warnings as you type within Visual Studio Code editor.
+The **PROBLEMS** (View->Problems) panel renders the
 AMP HTML validation error/warning messages with the row and column number in
 the document from where error/warning were reported.
 
@@ -20,7 +20,7 @@ After installing the extension from
 extension is activated when `HTML` file is opened. If extension finds one of
 the AMP specific attributes(shown below) defined in `<html>` tag, executes the
 AMP HTML validator for the document and renders the errors/warnings as
-reported by validator in the **PROBLEMS** pane, if any.
+reported by validator in the **PROBLEMS** panel, if any.
 
 Following are all valid examples of an AMP HTML document
  - `<html ⚡>`
@@ -34,9 +34,9 @@ Full list of valid amp attributes are:
 `⚡|amp|⚡4ads|amp4ads|⚡4email|amp4email` (case insensitive)
 
 All AMP HTML validator Errors/Warnings are reported in **PROBLEMS** view
-(Open the pane by `View->Problems`, if not already opened).
+(Open the panel by `View->Problems`, if not already opened).
 
-Issues are removed from the **PROBLEMS** pane when fixed in the editor.
+Issues are removed from the **PROBLEMS** panel when fixed in the editor.
 
 Each AMP HTML validation error/warning row has 3 parts as under:
 
@@ -47,7 +47,7 @@ Each AMP HTML validation error/warning row has 3 parts as under:
 - `DOCUMENTATION_LINK`: Link to AMP HTML documentation about this error.
 - `(LINE_NUM, COLUMN_NUM)`: Starting location of the error in the editor.
 
-The **PROBLEMS** pane might render other errors/warnings
+The **PROBLEMS** panel might render other errors/warnings
 (such as `html`, `css`) since, VS Code has build-in support for validating
 `html` and `css`, or you might have installed other extensions for
 additional validations of `html` documents. Each error reported by the
@@ -63,7 +63,7 @@ extensions.
 
 ![Validator extension in action](./image/amp-intro.png)
 
-The above screenshot renders the **PROBLEMS** pane with all errors/warnings
+The above screenshot renders the **PROBLEMS** panel with all errors/warnings
 across all open files. The `file explorer` also renders the numbers of
 errors shown next to the file name.
 (Red indicates errors, Green indicates warnings).
@@ -82,7 +82,7 @@ errors shown next to the file name.
   > 7. [AMP Bin](https://ampb.in/)
 
 ## Q. Will there be any performance implications due to this extension?
-  > This extension is using the [Language Server Protool](https://microsoft.github.io/language-server-protocol/),
+  > This extension is using the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/),
   > which run in its own process to avoid performance cost.
 
 ## Q. What file types are supported?
@@ -102,10 +102,26 @@ errors shown next to the file name.
   >
 
 ## Q. Any plans to support other editors?
-  > Since the extension is developed using the [Language Server Protool](https://microsoft.github.io/language-server-protocol/), it would be possible
+  > Since the extension is developed using the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/), it would be possible
   > to reuse the Language Server and develop extension/plugin for other
-  > [Language Server Protool](https://microsoft.github.io/language-server-protocol/)>
+  > [Language Server Protocol](https://microsoft.github.io/language-server-protocol/)>
   > supported editors in the future.
   > Currently there are no near future plans to support other editors but
   > discussion is underway to see how this effort can be extended for other
-  > popular editors.
+  > popular editors. Atom could be the next one.
+
+##Q. Can I configure this extension?
+  >
+  > The following two settings will be available in the future.
+  >
+  > `**PENDING IMPLEMENTATION**`
+  >
+  > Settings are available to change how this extension responds.
+  > (Use Code->Preferences->Settings to activate VS Code settings editor)
+  >
+  > Enable/Disable AMP HTML validation without uninstall
+  > * `"amphtml.validator.enabled": true|false` // Default: `true`
+  >
+  > Keep/Remove AMP HTML validation errors after closing the document
+  > * `"amphtml.validator.keepIssuesAfterDocumentClose": false` //Default:`true`
+
