@@ -82,7 +82,7 @@ errors shown next to the file name.
   > 7. [AMP Bin](https://ampb.in/)
 
 ## Q. Will there be any performance implications due to this extension?
-  > This extension is using the [Language Server Protool](https://microsoft.github.io/language-server-protocol/),
+  > This extension is using the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/),
   > which run in its own process to avoid performance cost.
 
 ## Q. What file types are supported?
@@ -102,9 +102,9 @@ errors shown next to the file name.
   >
 
 ## Q. Any plans to support other editors?
-  > Since the extension is developed using the [Language Server Protool](https://microsoft.github.io/language-server-protocol/), it would be possible
+  > Since the extension is developed using the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/), it would be possible
   > to reuse the Language Server and develop extension/plugin for other
-  > [Language Server Protool](https://microsoft.github.io/language-server-protocol/)>
+  > [Language Server Protocol](https://microsoft.github.io/language-server-protocol/)>
   > supported editors in the future.
   > Currently there are no near future plans to support other editors but
   > discussion is underway to see how this effort can be extended for other
