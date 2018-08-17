@@ -13,6 +13,11 @@ This extension uses AMP HTML validation available at:
 [AMP Validator](https://www.npmjs.com/package/amphtml-validator)
 Current amphtml-validator version: **1.0.23**
 
+Current implementation of amphtml-validator package fetches the latest version
+of validator.js from [CDN](https://cdn.ampproject.org/v0/validator.js), so
+this extension requires internet connection.
+[Issue #12](https://github.com/diparikh-project/vscode-amphtml-validator/issues/12) is open to make this extension work offline.
+
 **How to use AMP HTML Validator extension**
 
 After installing the extension from
@@ -104,7 +109,7 @@ errors shown next to the file name.
 ## Q. Any plans to support other editors?
   > Since the extension is developed using the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/), it would be possible
   > to reuse the Language Server and develop extension/plugin for other
-  > [Language Server Protocol](https://microsoft.github.io/language-server-protocol/)>
+  > [Language Server Protocol](https://microsoft.github.io/language-server-protocol/)
   > supported editors in the future.
   > Currently there are no near future plans to support other editors but
   > discussion is underway to see how this effort can be extended for other
@@ -113,6 +118,7 @@ errors shown next to the file name.
 ##Q. Can I configure this extension?
   >
   > The following two settings will be available in the future.
+  > [issue #13](https://github.com/diparikh-project/vscode-amphtml-validator/issues/13)
   >
   > `**PENDING IMPLEMENTATION**`
   >
