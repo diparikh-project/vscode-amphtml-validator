@@ -1,4 +1,4 @@
-# Visual Studio Code extension for AMP HTML ⚡ Validator
+# ![Validator extension in action](./image/amp-logo.png) Visual Studio Code extension for AMP HTML Validator
 
 This extension makes authoring AMP HTML documents, easy by validating for
 errors/warnings as you type within Visual Studio Code editor.
@@ -28,12 +28,13 @@ AMP HTML validator for the document and renders the errors/warnings as
 reported by validator in the **PROBLEMS** panel, if any.
 
 Following are all valid examples of an AMP HTML document
- - `<html ⚡>`
- - `<html lang="en" ⚡>`
- - `<html ⚡4ads>`
- - `<html amp4ads lang="en">`
- - `<html ⚡4email>`
- - `<html amp="" id="a">`
+
+- `<html ⚡>`
+- `<html lang="en" ⚡>`
+- `<html ⚡4ads>`
+- `<html amp4ads lang="en">`
+- `<html ⚡4email>`
+- `<html amp="" id="a">`
 
 Full list of valid amp attributes are:
 `⚡|amp|⚡4ads|amp4ads|⚡4email|amp4email` (case insensitive)
@@ -76,58 +77,63 @@ errors shown next to the file name.
 # FAQ
 
 ## Q. What are other options if I am not using VS Code as an editor?
-  > AMP HTML has multiple options to validate the documents
-  > [See Details](https://www.ampproject.org/docs/fundamentals/validate)
-  > 1. [In Browser validator](https://validator.ampproject.org/)
-  > 2. URL: #development=1 (Chrome DevTools console)
-  > 3. [Browser extension](https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc?hl=en) (Chrome & Opera)
-  > 4. npm package (https://www.npmjs.com/package/amphtml-validator)
-  > 5. gulp task [gulp-amp-html-validator](https://www.npmjs.com/package/gulp-amphtml-validator)
-  > 6. [Playground](https://ampbyexample.com/playground/)
-  > 7. [AMP Bin](https://ampb.in/)
+
+> AMP HTML has multiple options to validate the documents
+> [See Details](https://www.ampproject.org/docs/fundamentals/validate)
+>
+> 1. [In Browser validator](https://validator.ampproject.org/)
+> 2. URL: #development=1 (Chrome DevTools console)
+> 3. [Browser extension](https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc?hl=en) (Chrome & Opera)
+> 4. npm package (https://www.npmjs.com/package/amphtml-validator)
+> 5. gulp task [gulp-amp-html-validator](https://www.npmjs.com/package/gulp-amphtml-validator)
+> 6. [Playground](https://ampbyexample.com/playground/)
+> 7. [AMP Bin](https://ampb.in/)
 
 ## Q. Will there be any performance implications due to this extension?
-  > This extension is using the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/),
-  > which run in its own process to avoid performance cost.
+
+> This extension is using the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/),
+> which run in its own process to avoid performance cost.
 
 ## Q. What file types are supported?
 
-  > AMP HTML documents are `HTML` douments and by default VS Code supports
-  > `.html` and `.htm` file extensions but VS Code can be extended to support
-  > HTML files with other extensions:
-  >
-  > ```json
-  >     "files.associations": {
-  >         "*.tpl": "html",
-  >         "*.hbs": "html"
-  >     },
-  > ```
-  > Adding above VS Code setting (`Code -> Preferences -> Settings`)
-  > will allow `.tpl` and `.hbs` file types for AMP HTML validation.
-  >
+> AMP HTML documents are `HTML` douments and by default VS Code supports
+> `.html` and `.htm` file extensions but VS Code can be extended to support
+> HTML files with other extensions:
+>
+> ```json
+>     "files.associations": {
+>         "*.tpl": "html",
+>         "*.hbs": "html"
+>     },
+> ```
+>
+> Adding above VS Code setting (`Code -> Preferences -> Settings`)
+> will allow `.tpl` and `.hbs` file types for AMP HTML validation.
 
 ## Q. Any plans to support other editors?
-  > Since the extension is developed using the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/), it would be possible
-  > to reuse the Language Server and develop extension/plugin for other
-  > [Language Server Protocol](https://microsoft.github.io/language-server-protocol/)
-  > supported editors in the future.
-  > Currently there are no near future plans to support other editors but
-  > discussion is underway to see how this effort can be extended for other
-  > popular editors. Atom could be the next one.
+
+> Since the extension is developed using the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/), it would be possible
+> to reuse the Language Server and develop extension/plugin for other
+> [Language Server Protocol](https://microsoft.github.io/language-server-protocol/)
+> supported editors in the future.
+> Currently there are no near future plans to support other editors but
+> discussion is underway to see how this effort can be extended for other
+> popular editors. Atom could be the next one.
 
 ##Q. Can I configure this extension?
-  >
-  > The following two settings will be available in the future.
-  > [issue #13](https://github.com/diparikh-project/vscode-amphtml-validator/issues/13)
-  >
-  > `**PENDING IMPLEMENTATION**`
-  >
-  > Settings are available to change how this extension responds.
-  > (Use Code->Preferences->Settings to activate VS Code settings editor)
-  >
-  > Enable/Disable AMP HTML validation without uninstall
-  > * `"amphtml.validator.enabled": true|false` // Default: `true`
-  >
-  > Keep/Remove AMP HTML validation errors after closing the document
-  > * `"amphtml.validator.keepIssuesAfterDocumentClose": false` //Default:`true`
 
+> The following two settings will be available in the future.
+> [issue #13](https://github.com/diparikh-project/vscode-amphtml-validator/issues/13)
+>
+> `**PENDING IMPLEMENTATION**`
+>
+> Settings are available to change how this extension responds.
+> (Use Code->Preferences->Settings to activate VS Code settings editor)
+>
+> Enable/Disable AMP HTML validation without uninstall
+>
+> - `"amphtml.validator.enabled": true|false` // Default: `true`
+>
+> Keep/Remove AMP HTML validation errors after closing the document
+>
+> - `"amphtml.validator.keepIssuesAfterDocumentClose": false` //Default:`true`
