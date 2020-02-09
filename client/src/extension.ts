@@ -16,10 +16,7 @@
 'use strict';
 
 import * as path from 'path';
-import {
-  ExtensionContext,
-  workspace
-} from 'vscode';
+import { ExtensionContext, workspace } from 'vscode';
 
 import {
   LanguageClient,
@@ -45,7 +42,7 @@ export function activate(context: ExtensionContext) {
 
   // Get file types to lint from user settings.
   // TODO(diparikh): Implement amphtml.validator.documentSelector setting.
-  let documentSelector = [{language: 'html', scheme: 'file'}];
+  let documentSelector = [{ language: 'html', scheme: 'file' }];
 
   let serverOptions: ServerOptions = {
     run: { module: serverModule, transport: TransportKind.ipc },
@@ -73,7 +70,6 @@ export function activate(context: ExtensionContext) {
     clientOptions,
     forceDebug
   );
-
   client.start();
 }
 

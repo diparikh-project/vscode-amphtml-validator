@@ -39,8 +39,7 @@ interface AmpDoc {
  * @param textDocument
  */
 export function isAmpHtmlDocument(textDocument: TextDocument): AmpDoc {
-  const ampPattern =
-      /.*?<html\s*.*?\s+(⚡4ads|amp4ads|⚡4email|amp4email|amp|⚡){1}(\s+|>|=)/gi;
+  const ampPattern = /.*?<html\s*.*?\s+(⚡4ads|amp4ads|⚡4email|amp4email|amp|⚡){1}(\s+|>|=)/gi;
 
   // Remove all comments, which might include <html> tag.
   // Non-greedy pattern to capture nested comments.
@@ -49,18 +48,18 @@ export function isAmpHtmlDocument(textDocument: TextDocument): AmpDoc {
   const text = textDocument.getText().replace(commentsPattern, '');
   const ampPatternResponse = ampPattern.exec(text);
   const ampDocType =
-      (ampPatternResponse === null) ?
-      '' :
-      (ampPatternResponse.length >= 1 &&
-      ampPatternResponse[1]);
+    ampPatternResponse === null
+      ? ''
+      : ampPatternResponse.length >= 1 && ampPatternResponse[1];
 
   const ampDocTypParsed = ampDocType.toUpperCase().replace(/⚡/, 'AMP');
 
   const ampDoc: AmpDoc = {
-    isAmpDoc: (ampDocType !== ''),
+    isAmpDoc: ampDocType !== '',
     ampDocType: ampDocType,
-    ampDocTypeParsed:
-        <AmpValidatorTypes.AmpValidatorValidationHtmlFormat>ampDocTypParsed
+    ampDocTypeParsed: <AmpValidatorTypes.AmpValidatorValidationHtmlFormat>(
+      ampDocTypParsed
+    )
   };
 
   return ampDoc;
@@ -71,7 +70,8 @@ export function isAmpHtmlDocument(textDocument: TextDocument): AmpDoc {
  * @param error
  */
 export function getRange(
-    error: AmpValidatorTypes.AmpValidatorValidationResultError): Range {
+  error: AmpValidatorTypes.AmpValidatorValidationResultError
+): Range {
   return {
     start: {
       line: error.line - 1,
@@ -92,17 +92,17 @@ export function getRange(
  * @param docType
  */
 export function makeDiagnostic(
-    error: AmpValidatorTypes.AmpValidatorValidationResultError,
-    docType: string): Diagnostic {
-  const errorUrl = (error.specUrl) ? ` : ${error.specUrl}`: '';
+  error: AmpValidatorTypes.AmpValidatorValidationResultError,
+  docType: string
+): Diagnostic {
+  const errorUrl = error.specUrl ? ` : ${error.specUrl}` : '';
   return {
     severity:
-        (error.severity ==
-        AmpValidatorTypes.AmpValidatorValidationResultErrorSeverity.ERROR) ?
-        DiagnosticSeverity.Error : DiagnosticSeverity.Warning,
-    message: `${error.message}${errorUrl}`,
-    range: getRange(error),
-    code: error.code,
-    source: docType
+      error.severity ==
+      AmpValidatorTypes.AmpValidatorValidationResultErrorSeverity.ERROR
+        ? DiagnosticSeverity.Error
+        : DiagnosticSeverity.Warning,
+    message: `${docType} : ${error.message}${errorUrl}`,
+    range: getRange(error)
   };
 }

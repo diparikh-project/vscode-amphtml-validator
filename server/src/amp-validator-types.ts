@@ -25,7 +25,7 @@
 export enum AmpValidatorValidationResultErrorSeverity {
   UNKNOWN_SEVERITY = 'UNKNOWN_SEVERITY',
   ERROR = 'ERROR',
-  WARNING = 'WARNING',
+  WARNING = 'WARNING'
 }
 
 /**
@@ -52,7 +52,7 @@ export enum AmpValidatorValidationHtmlFormat {
   AMP = 'AMP',
   AMP4ADS = 'AMP4ADS',
   AMP4EMAIL = 'AMP4EMAIL',
-  EXPERIMENTAL = 'EXPERIMENTAL'  // Not yet implemented
+  EXPERIMENTAL = 'EXPERIMENTAL' // Not yet implemented
 }
 
 /**
@@ -94,7 +94,10 @@ export interface AmpValidatorValidationResult {
  * Ref: https://github.com/ampproject/amphtml/blob/master/validator/nodejs/index.js#L263
  */
 export interface AmpValidatorValidateString {
-  (text: string, format?: AmpValidatorValidationHtmlFormat): AmpValidatorValidationResult;
+  (
+    text: string,
+    format?: AmpValidatorValidationHtmlFormat
+  ): AmpValidatorValidationResult;
 }
 
 /**
