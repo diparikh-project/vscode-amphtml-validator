@@ -24,10 +24,7 @@ import {
   InitializeParams,
   DidChangeConfigurationNotification
 } from 'vscode-languageserver/lib/main';
-import {
-  isAmpHtmlDocument,
-  makeDiagnostic
-} from './utils';
+import { isAmpHtmlDocument, makeDiagnostic } from './utils';
 
 const amphtmlValidator = require('amphtml-validator');
 
@@ -89,18 +86,21 @@ async function validateDocument(textDocument: TextDocument): Promise<void> {
   const checkAmpDocument = isAmpHtmlDocument(textDocument);
 
   if (checkAmpDocument.isAmpDoc) {
-    amphtmlValidator.getInstance().then(
-        (validator: AmpValidatorTypes.AmpValidator) => {
-      const errors: AmpValidatorTypes.AmpValidatorValidationResultError[] =
-          validator.validateString(
-          text, checkAmpDocument.ampDocTypeParsed).errors;
+    amphtmlValidator
+      .getInstance()
+      .then((validator: AmpValidatorTypes.AmpValidator) => {
+        const errors: AmpValidatorTypes.AmpValidatorValidationResultError[] = validator.validateString(
+          text,
+          checkAmpDocument.ampDocTypeParsed
+        ).errors;
 
-      const diagnostics = (errors.length === 0) ?
-          cleanupDiagnostics() :
-          buildDiagnostics(errors, checkAmpDocument.ampDocType);
+        const diagnostics =
+          errors.length === 0
+            ? cleanupDiagnostics()
+            : buildDiagnostics(errors, checkAmpDocument.ampDocType);
 
-      connection.sendDiagnostics({ uri, diagnostics });
-    });
+        connection.sendDiagnostics({ uri, diagnostics });
+      });
   } else {
     connection.sendDiagnostics({ uri, diagnostics: cleanupDiagnostics() });
   }
@@ -120,15 +120,16 @@ function cleanupDiagnostics() {
  * @param docType
  */
 function buildDiagnostics(
-    errors: AmpValidatorTypes.AmpValidatorValidationResultError[] = [],
-    docType: string):
-    Diagnostic[] {
+  errors: AmpValidatorTypes.AmpValidatorValidationResultError[] = [],
+  docType: string
+): Diagnostic[] {
   let diagnostics: Diagnostic[] = [];
   errors.forEach(
-      (error: AmpValidatorTypes.AmpValidatorValidationResultError) => {
-    diagnostics.push(makeDiagnostic(error, docType));
-  });
-  connection.sendNotification("AMPHTML.VALIDATION", [errors]);
+    (error: AmpValidatorTypes.AmpValidatorValidationResultError) => {
+      diagnostics.push(makeDiagnostic(error, docType));
+    }
+  );
+  connection.sendNotification('AMPHTML.VALIDATION', [errors]);
   return diagnostics;
 }
 
