@@ -1,4 +1,4 @@
-# ![Validator extension in action](./image/amp-logo.png) Visual Studio Code extension for AMP HTML Validator
+# Visual Studio Code extension for AMP HTML Validator
 
 This extension makes authoring AMP HTML documents, easy by validating for
 errors/warnings as you type within Visual Studio Code editor.

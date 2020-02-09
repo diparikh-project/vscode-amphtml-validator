@@ -3,7 +3,7 @@
   "description": "VSCode extension for AMP HTML validator",
   "author": "Dipak Parikh",
   "license": "Apache-2.0",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icon": "image/amp-logo.png",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
     "Linters"
   ],
   "engines": {
-    "vscode": "^1.33.0"
+    "vscode": "^1.23.0"
   },
   "activationEvents": [
     "onLanguage:html"
