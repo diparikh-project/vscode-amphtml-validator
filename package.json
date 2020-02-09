@@ -3,8 +3,8 @@
   "description": "VSCode extension for AMP HTML validator",
   "author": "Dipak Parikh",
   "license": "Apache-2.0",
-  "version": "1.0.0",
-  "icon": "image/amp.png",
+  "version": "1.0.1",
+  "icon": "image/amp-logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/diparikh-project/vscode-amphtml-validator"
@@ -19,7 +19,7 @@
     "Linters"
   ],
   "engines": {
-    "vscode": "^1.23.0"
+    "vscode": "^1.33.0"
   },
   "activationEvents": [
     "onLanguage:html"
@@ -62,8 +62,8 @@
     "test": "sh ./scripts/e2e.sh"
   },
   "devDependencies": {
-    "@types/mocha": "^5.2.0",
-    "@types/node": "^8.0.0",
-    "typescript": "2.8.3"
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^12.0.0",
+    "typescript": "3.7.5"
   }
 }
