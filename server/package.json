@@ -1,7 +1,7 @@
 {
   "name": "amphtml-validator-server",
   "description": "amphtml-validator language server in node.",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "author": "Dipak Parikh",
   "license": "Apache-2.0",
   "engines": {
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "vscode-languageserver": "^5.2.1",
-    "amphtml-validator": "1.0.29"
+    "amphtml-validator": "1.0.31"
   },
   "scripts": {}
 }

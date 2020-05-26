@@ -1,33 +1,36 @@
-# Visual Studio Code extension for AMP HTML Validator
+# Visual Studio Code extension for AMP Validator & Snippets
 
-This extension makes authoring AMP HTML documents, easy by validating for
+This extension makes authoring AMP documents, easy by validating for
 errors/warnings as you type within Visual Studio Code editor.
 The **PROBLEMS** (View->Problems) panel renders the
-AMP HTML validation error/warning messages with the row and column number in
-the document from where error/warning were reported.
+AMP validation error/warning messages with the row and column number in
+the document from where errors/warnings were reported.
 
 Related row is focused in the editor when an error/warning is selected.
 Hovering over the error in the editor reveals a tooltip with error details.
 
-This extension uses AMP HTML validation available at:
-[AMP Validator](https://www.npmjs.com/package/amphtml-validator)
-Current amphtml-validator version: **1.0.23**
+This version also adds Snippets for all the AMP components and scripts.
+Start typing amp- and the autocomplete will show available components and scripts.
+
+This extension uses AMP validator available at:
+[AMP Validator](https://www.npmjs.com/package/amphtml-validator).
+This extension uses amphtml-validator version: **1.0.31**
 
 Current implementation of amphtml-validator package fetches the latest version
 of validator.js from [CDN](https://cdn.ampproject.org/v0/validator.js), so
 this extension requires internet connection.
 [Issue #12](https://github.com/diparikh-project/vscode-amphtml-validator/issues/12) is open to make this extension work offline.
 
-**How to use AMP HTML Validator extension**
+**How to use AMP Validator extension**
 
 After installing the extension from
-[VS Code Marketplace](https://marketplace.visualstudio.com/VSCode)[coming soon], the
+[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=amphtml.amphtml-validator), the
 extension is activated when `HTML` file is opened. If extension finds one of
 the AMP specific attributes(shown below) defined in `<html>` tag, executes the
-AMP HTML validator for the document and renders the errors/warnings as
+AMP validator for the document and renders the errors/warnings as
 reported by validator in the **PROBLEMS** panel, if any.
 
-Following are all valid examples of an AMP HTML document
+Following are all examples of valid AMP documents
 
 - `<html ⚡>`
 - `<html lang="en" ⚡>`
@@ -36,21 +39,21 @@ Following are all valid examples of an AMP HTML document
 - `<html ⚡4email>`
 - `<html amp="" id="a">`
 
-Full list of valid amp attributes are:
+Full list of valid AMP attributes are:
 `⚡|amp|⚡4ads|amp4ads|⚡4email|amp4email` (case insensitive)
 
-All AMP HTML validator Errors/Warnings are reported in **PROBLEMS** view
+All AMP validator Errors/Warnings are reported in **PROBLEMS** view
 (Open the panel by `View->Problems`, if not already opened).
 
 Issues are removed from the **PROBLEMS** panel when fixed in the editor.
 
-Each AMP HTML validation error/warning row has 3 parts as under:
+Each AMP validation error/warning row has 3 parts as under:
 
 `[<TYPE>] <ERROR_MESSAGE> : <LINK> (LINE_NUM, COLUMN_NUM)`
 
-- `TYPE:` AMP HTML document type as defined in `<html>` tag.
-- `ERROR_MESSAGE`: The error/warning message as reported by the AMP HTML validator.
-- `DOCUMENTATION_LINK`: Link to AMP HTML documentation about this error.
+- `TYPE:` AMP document type as defined in `<html>` tag.
+- `ERROR_MESSAGE`: The error/warning message as reported by the AMP validator.
+- `DOCUMENTATION_LINK`: Link to AMP documentation about this error.
 - `(LINE_NUM, COLUMN_NUM)`: Starting location of the error in the editor.
 
 The **PROBLEMS** panel might render other errors/warnings
@@ -61,18 +64,27 @@ various extensions on the same document will have different `TYPE`.
 
 Note that number of Errors/Warnings are also rendered in the `File Explorer`
 for a quick view of Errors/Warnings across all opened files. The total
-number of errors/warnings includes `AMP HTML`, `HTML` and `CSS`
+number of errors/warnings includes `AMP`, `HTML` and `CSS`
 errors/warnings. This may also include errors/warnings reported by other
 extensions.
 
-## Sample AMP HTML Validator extension in action
+## Sample AMP Validator extension in action
 
 ![Validator extension in action](./image/amp-intro.png)
 
-The above screenshot renders the **PROBLEMS** panel with all errors/warnings
+The above screenshot renders the **PROBLEMS** panel with all `errors`/ `warnings`
 across all open files. The `file explorer` also renders the numbers of
 errors shown next to the file name.
-(Red indicates errors, Green indicates warnings).
+
+---
+
+![Snippet in action](./image/snippets.png)
+
+The above screen renders the auto-complete option available when "amp-acc" is keyed-in.
+
+All the "amp-\*" components and corresponding "amp-\*-script" options are available for the auto-complete.
+
+(**Note:** Snippets can be disabled by installing 'Control Snippets' or similar extension and disabling `amphtml-validator` snippets.)
 
 # FAQ
 
@@ -120,7 +132,13 @@ errors shown next to the file name.
 > discussion is underway to see how this effort can be extended for other
 > popular editors. Atom could be the next one.
 
-##Q. Can I configure this extension?
+## Q. amphtml has a lot of snippets. Can I turn off if not using?
+
+> Visual Studio Code, currently does not have features to turn off snippets
+> but there are extensions available to turn off specific snippets.
+> One such extension we have tried and seems working as expected is `"Control Snippets"`.
+
+## Q. Can I configure this extension?
 
 > The following two settings will be available in the future.
 > [issue #13](https://github.com/diparikh-project/vscode-amphtml-validator/issues/13)
@@ -134,6 +152,6 @@ errors shown next to the file name.
 >
 > - `"amphtml.validator.enabled": true|false` // Default: `true`
 >
-> Keep/Remove AMP HTML validation errors after closing the document
+> Keep/Remove AMP validation errors after closing the document
 >
 > - `"amphtml.validator.keepIssuesAfterDocumentClose": false` //Default:`true`

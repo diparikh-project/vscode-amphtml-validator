@@ -22,7 +22,7 @@ import {
   LanguageClient,
   LanguageClientOptions,
   ServerOptions,
-  TransportKind
+  TransportKind,
 } from 'vscode-languageclient';
 
 // Reference to the client. Created on activation and removed on deactivation.
@@ -49,8 +49,8 @@ export function activate(context: ExtensionContext) {
     debug: {
       module: serverModule,
       transport: TransportKind.ipc,
-      options: debugOptions
-    }
+      options: debugOptions,
+    },
   };
 
   let clientOptions: LanguageClientOptions = {
@@ -58,8 +58,8 @@ export function activate(context: ExtensionContext) {
     synchronize: {
       configurationSection: 'amphtml.validator',
       // Notify the server about file changes to '.clientrc files contained in the workspace.
-      fileEvents: workspace.createFileSystemWatcher('**/.clientrc')
-    }
+      fileEvents: workspace.createFileSystemWatcher('**/.clientrc'),
+    },
   };
 
   let forceDebug = false;
