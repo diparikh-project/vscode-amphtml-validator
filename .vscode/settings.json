@@ -8,5 +8,9 @@
 	"typescript.tsdk": "./node_modules/typescript/lib",
 	"typescript.tsc.autoDetect": "off",
 	"npm.exclude": ["**/client", "**/server"],
-	"npm.enableScriptExplorer": true
+	"npm.enableScriptExplorer": true,
+	"editor.fontFamily": "Menlo, Consolas, Monaco, 'Source Code Pro', 'Courier New', monospace",
+	"editor.fontSize": 14,
+	"editor.fontWeight": "100",
+	"workbench.fontAliasing": "antialiased"
 }

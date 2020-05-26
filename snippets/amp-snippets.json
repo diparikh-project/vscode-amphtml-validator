@@ -1,0 +1,2673 @@
+{
+  "amp-html": {
+    "prefix": "amp-html",
+    "description": "amphtml / ⚡ document",
+    "body": [
+      "<!doctype html>",
+      "<!-- This tells everyone that this is an AMP file. `<html amp>` works too -->",
+      "<html ⚡>  <!--Ref: https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/ -->",
+      "<!-- The charset definition must be the first child of the `<head>` tag -->",
+      "  <head>",
+      "    <meta charset=\"utf-8\">",
+      "    <!-- The AMP runtime must be loaded as the second child of the `<head>` tag.-->",
+      "    <script async src=\"https://cdn.ampproject.org/v0.js\"></script>",
+      "    <!--AMP HTML files require a canonical link pointing to the regular HTML. If no HTML version exists, it should point to itself -->",
+      "    <link rel=\"canonical\" href=\"$2.html\">",
+      "    <title>$1</title>",
+      "    <meta name=\"viewport\" content=\"width=device-width,minimum-scale=1,initial-scale=1\">",
+      "    <!--CSS must be embedded inline-->",
+      "    <style amp-custom>",
+      "      ",
+      "    </style>",
+      "",
+      "    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>",
+      "  </head>",
+      "  <body>",
+      "    $0",
+      "  </body>",
+      "</html>"
+    ]
+  },
+
+  "amp-4ads": {
+    "prefix": "amp-4ads",
+    "description": "amp4ads/ ⚡4ads document",
+    "body": [
+      "<!doctype html>",
+      "<!-- This tells everyone that this is an amp4ads file. `<html amp4ads>` works too -->",
+      "<html ⚡4ads> <!-- Ref: https://amp.dev/documentation/guides-and-tutorials/learn/a4a_spec/?format=ads -->",
+      "  <head>",
+      "    <meta charset=\"utf-8\">",
+      "    <!--Include optional meta tags in HTML head as identifiers. Those meta tags must be placed before the amp4ads-v0.js script. The value of vendor and id are strings containing only [0-9a-zA-Z_-]. The value of type is either creative-id or impression-id-->",
+      "     <meta name=\"amp4ads-id\" content=\"width=device-width,minimum-scale=1,initial-scale=1\">",
+      "     <script async src=\"https://cdn.ampproject.org/amp4ads-v0.js\"></script>",
+      "     <meta name=\"viewport\" content=\"width=device-width,minimum-scale=1\">",
+      "     <!--Creative CSS is limited to 20,000 bytes-->",
+      "     <style amp4ads-boilerplate>body{visibility:hidden}</style>",
+      "     <title>$1</title>",
+      "  </head>",
+      "  <body>",
+      "    <!--Sample image ad-->",
+      "    <a target=\"_blank\" href=\"https://www.amp.dev\">",
+      "      <amp-img width=\"300\" height=\"250\" alt=\"Learn amp\" src=\"/static/img/docs/ads/amp-300x250.png\"></amp-img>",
+      "    </a>\n$0",
+      "  </body>",
+      "</html>"
+    ]
+  },
+
+  "amp-4email": {
+    "prefix": "amp-4email",
+    "description": "amp4email / ⚡4email",
+    "body": [
+      "<!doctype html>",
+      "<!-- This tells everyone that this is an amp4email file. `<html ⚡4email>` works too -->",
+      "<html ⚡4email> <!-- Ref: https://amp.dev/documentation/guides-and-tutorials/learn/email-spec/amp-email-format/?format=email -->",
+      "  <head>",
+      "    <meta charset=\"utf-8\">",
+      "    <script async src=\"https://cdn.ampproject.org/v0.js\"></script>",
+      "    <style amp4email-boilerplate>body{visibility:hidden}</style>",
+      "    <style amp-custom>",
+      "      ",
+      "    </style>",
+      "  </head>",
+      "  <body>",
+      "    $0",
+      "  </body>",
+      "</html>"
+    ]
+  },
+
+  "amp-4email-sample": {
+    "prefix": "amp-4email-sample",
+    "description": "Sample amp4email / ",
+    "body": [
+      "<!doctype html>",
+      "<html ⚡4email> <!-- Ref: https://amp.dev/documentation/guides-and-tutorials/learn/email-spec/amp-email-format/?format=email -->",
+      "  <head>",
+      "    <meta charset=\"utf-8\">",
+      "    <script async src=\"https://cdn.ampproject.org/v0.js\"></script>",
+      "    <script async custom-element=\"amp-bind\" src=\"https://cdn.ampproject.org/v0/amp-bind-0.1.js\"></script>",
+      "    <script async custom-element=\"amp-carousel\" src=\"https://cdn.ampproject.org/v0/amp-carousel-0.1.js\"></script>",
+      "    <style amp4email-boilerplate>body{visibility:hidden}</style>",
+      "    <style amp-custom>",
+      "      h1 {",
+      "        font-family: arial;",
+      "        margin: 10px;",
+      "      }",
+      "      .center {",
+      "        text-align: center;",
+      "      }",
+      "      .carousel-preview {",
+      "        margin-top: 10px;",
+      "      }",
+      "    </style>",
+      "  </head>",
+      "  <body> ",
+      "    <amp-state id=\"myState\">",
+      "      <script type=\"application/json\">",
+      "        {\"cats\":",
+      "          [",
+      "            {",
+      "              \"name\": \"Aakash\",",
+      "              \"description\": \"Very sweet gentleman that is quite shy in a shelter environment. He may hide under his blanket upon initial approach, but he is an affectionate lovebug.\"",
+      "            },",
+      "            {",
+      "              \"name\": \"Filip\",",
+      "              \"description\": \"Friendly and enjoys pets and head rubs. Is known to sit on keyboards and refuses to touch anything with catnip on it.\"",
+      "            },",
+      "            {",
+      "              \"name\": \"Julian\",",
+      "              \"description\": \"Both bold and extremely sweet. Wastes no time in investigating new smells, objects, and places, but enjoys lazing in the sun!\"",
+      "            },",
+      "            {",
+      "              \"name\": \"John\",",
+      "              \"description\": \"This playful and spirited cat would like to be outside his kennel and will be so happy when he gets to his forever home with more room to move.\"",
+      "            }",
+      "          ]",
+      "        }",
+      "      </script>",
+      "    </amp-state>",
+      "    <h1>Adorable Adoptable Animals</h1>",
+      "    <amp-carousel id=\"carousel-with-preview\" width=\"800\" height=\"400\" layout=\"responsive\" type=\"slides\" on=\"slideChange:AMP.setState({currentCat: event.index})\">",
+      "      <amp-img layout=\"fill\" src=\"https://raw.githubusercontent.com/ampproject/docs/future/pages/static/img/docs/tutorials/firstemail/photo_by_caleb_woods.jpg\"  alt=\"photo courtesy of Unsplash\"></amp-img>",
+      "      <amp-img layout=\"fill\" src=\"https://raw.githubusercontent.com/ampproject/docs/future/pages/static/img/docs/tutorials/firstemail/photo_by_craig_mclaclan.jpg\"  alt=\"photo courtesy of Unsplash\"></amp-img>",
+      "      <amp-img layout=\"fill\" src=\"https://raw.githubusercontent.com/ampproject/docs/future/pages/static/img/docs/tutorials/firstemail/photo_by_lightscape.jpg\"  alt=\"photo courtesy of Unsplash\"></amp-img>",
+      "      <amp-img layout=\"fill\" src=\"https://raw.githubusercontent.com/ampproject/docs/future/pages/static/img/docs/tutorials/firstemail/photo_by_nick_karvounis.jpg\"  alt=\"photo courtesy of Unsplash\"></amp-img>",
+      "    </amp-carousel>\n$0",
+      "    <div class=\"center\">",
+      "      <h1>",
+      "        <span [text]=\"myState.cats[currentCat].name\">Aakash</span>  is available for adoption!",
+      "      </h1>",
+      "    </div>",
+      "    <p class=\"center\">About <span [text]=\"myState.cats[currentCat].name\"> Aakash</span></p>",
+      "    <p class=\"center\" [text]=\"myState.cats[currentCat].description\">Very sweet gentleman that is quite shy in a shelter environment. He may hide under his blanket upon initial approach, but he is an affectionate lovebug.</p>",
+      "  </body>",
+      "</html>"
+    ]
+  },
+
+  "amp-3d-gltf-script": {
+    "prefix": "amp-3d-gltf-script",
+    "body": "<script async custom-element=\"amp-3d-gltf\" src=\"https://cdn.ampproject.org/v0/amp-3d-gltf-0.1.js\"></script>\n$0",
+    "description": "Required for amp-3d-gltf component"
+  },
+
+  "amp-3q-player-script": {
+    "prefix": "amp-3q-player-script",
+    "body": "<script async custom-element=\"amp-3q-player\" src=\"https://cdn.ampproject.org/v0/amp-3q-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-3q-player component"
+  },
+
+  "amp-accordion-script": {
+    "prefix": "amp-accordion-script",
+    "body": "<script async custom-element=\"amp-accordion\" src=\"https://cdn.ampproject.org/v0/amp-accordion-0.1.js\"></script>\n$0",
+    "description": "Required for amp-accordion component"
+  },
+
+  "amp-analytics-script": {
+    "prefix": "amp-analytics-script",
+    "body": "<script async custom-element=\"amp-analytics\" src=\"https://cdn.ampproject.org/v0/amp-analytics-0.1.js\"></script>\n$0",
+    "description": "Required for amp-analytics component"
+  },
+
+  "amp-access-script": {
+    "prefix": "amp-access-script",
+    "body": "<script async custom-element=\"amp-access\" src=\"https://cdn.ampproject.org/v0/amp-access-0.1.js\"></script>\n$0",
+    "description": "Required for amp-access component"
+  },
+
+  "amp-access-laterpay-script": {
+    "prefix": "amp-access-laterpay-script",
+    "body": "<script async custom-element=\"amp-access-laterpay\" src=\"https://cdn.ampproject.org/v0/amp-access-laterpay-0.2.js\"></script>\n$0",
+    "description": "Required for amp-access-laterpay component"
+  },
+
+  "amp-access-poool-script": {
+    "prefix": "amp-access-poool-script",
+    "body": "<script async custom-element=\"amp-access-poool\" src=\"https://cdn.ampproject.org/v0/amp-access-poool-0.1.js\"></script>\n$0",
+    "description": "Required for amp-access-poool component"
+  },
+
+  "amp-action-macro-script": {
+    "prefix": "amp-access-macro-script",
+    "body": "<script async custom-element=\"amp-action-macro\" src=\"https://cdn.ampproject.org/v0/amp-action-macro-0.1.js\"></script>\n$0",
+    "description": "Required for amp-access-macro component"
+  },
+
+  "amp-ad-exit-script": {
+    "prefix": "amp-ad-exit-script",
+    "body": "<script async custom-element=\"amp-ad-exit\" src=\"https://cdn.ampproject.org/v0/amp-ad-exit-0.1.js\"></script>\n$0",
+    "description": "Required for amp-ad-exit component"
+  },
+
+  "amp-ad-script": {
+    "prefix": "amp-ad-script",
+    "body": "<script async custom-element=\"amp-ad\" src=\"https://cdn.ampproject.org/v0/amp-ad-0.1.js\"></script>\n$0",
+    "description": "Required for amp-ad component"
+  },
+
+  "amp-addthis-script": {
+    "prefix": "amp-addthis-script",
+    "body": "<script async custom-element=\"amp-addthis\" src=\"https://cdn.ampproject.org/v0/amp-addthis-0.1.js\"></script>\n$0",
+    "description": "Required for amp-adthis component"
+  },
+
+  "amp-anim-script": {
+    "prefix": "amp-anim-script",
+    "body": "<script async custom-element=\"amp-anim\" src=\"https://cdn.ampproject.org/v0/amp-anim-0.1.js\"></script>\n$0",
+    "description": "Required for amp-anim component"
+  },
+
+  "amp-animation-script": {
+    "prefix": "amp-animation-script",
+    "body": "<script async custom-element=\"amp-animation\" src=\"https://cdn.ampproject.org/v0/amp-animation-0.1.js\"></script>\n$0",
+    "description": "Required for amp-animation component"
+  },
+
+  "amp-apester-media-script": {
+    "prefix": "amp-apester-media-script",
+    "body": "<script async custom-element=\"amp-apester-media\" src=\"https://cdn.ampproject.org/v0/amp-apester-media-0.1.js\"></script>\n$0",
+    "description": "Required for amp-apester-media component"
+  },
+
+  "amp-app-banner-script": {
+    "prefix": "amp-app-banner-script",
+    "body": "<script async custom-element=\"amp-app-banner\" src=\"https://cdn.ampproject.org/v0/amp-app-banner-0.1.js\"></script>\n$0",
+    "description": "Requried for amp-app-banner component"
+  },
+
+  "amp-audio-script": {
+    "prefix": "amp-audio-script",
+    "body": "<script async custom-element=\"amp-audio\" src=\"https://cdn.ampproject.org/v0/amp-audio-0.1.js\"></script>\n$0",
+    "description": "Required for amp-audio component"
+  },
+
+  "amp-auto-ads-script": {
+    "prefix": "amp-auto-ads-script",
+    "body": "<script async custom-element=\"amp-auto-ads\" src=\"https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js\"></script>\n$0",
+    "description": "Required for amp-auto-ads component"
+  },
+
+  "amp-autocomplete-script": {
+    "prefix": "amp-autocomplete-script",
+    "body": "<script async custom-element=\"amp-autocomplete\" src=\"https://cdn.ampproject.org/v0/amp-autocomplete-0.1.js\"></script>\n$0",
+    "description": "Required for amp-autocomplete component"
+  },
+
+  "amp-form-script": {
+    "prefix": "amp-form-script",
+    "body": "<script async custom-element=\"amp-form\" src=\"https://cdn.ampproject.org/v0/amp-form-0.1.js\"></script>\n$0",
+    "description": "Required for amp-form component"
+  },
+
+  "amp-mustache-script": {
+    "prefix": "amp-mustache-script",
+    "body": "<script async custom-template=\"amp-mustache\" src=\"https://cdn.ampproject.org/v0/amp-mustache-0.2.js\"></script>\n$0",
+    "description": "Required for amp-mustache component"
+  },
+
+  "amp-base-carousel-script": {
+    "prefix": "amp-base-carousel-script",
+    "body": "<script async custom-element=\"amp-base-carousel\" src=\"https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js\"></script>\n$0",
+    "description": "Required for amp-base-carousel component"
+  },
+
+  "amp-beopinion-script": {
+    "prefix": "amp-beopinion-script",
+    "body": "<script async custom-element=\"amp-beopinion\" src=\"https://cdn.ampproject.org/v0/amp-beopinion-0.1.js\"></script>\n$0",
+    "description": "Required for amp-beopinion component"
+  },
+
+  "amp-bodymovin-animation-script": {
+    "prefix": "amp-bodymovin-animation-script",
+    "body": "<script async custom-element=\"amp-bodymovin-animation\" src=\"https://cdn.ampproject.org/v0/amp-bodymovin-animation-0.1.js\"></script>\n$0",
+    "description": "Required for amp-bodymovin-animation component"
+  },
+
+  "amp-brid-player-script": {
+    "prefix": "amp-brid-player-script",
+    "body": "<script async custom-element=\"amp-brid-player\" src=\"https://cdn.ampproject.org/v0/amp-brid-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-brid-player component"
+  },
+
+  "amp-story-script": {
+    "prefix": "amp-story-script",
+    "body": "<script async custom-element=\"amp-story\" src=\"https://cdn.ampproject.org/v0/amp-story-1.0.js\"></script>\n$0",
+    "description": "Required for amp-story component"
+  },
+
+  "amp-bind-script": {
+    "prefix": "amp-bind-script",
+    "body": "<script async custom-element=\"amp-bind\" src=\"https://cdn.ampproject.org/v0/amp-bind-0.1.js\"></script>\n$0",
+    "description": "Required for amp-bind component"
+  },
+
+  "amp-brightcove-script": {
+    "prefix": "amp-brightcove-script",
+    "body": "<script async custom-element=\"amp-brightcove\" src=\"https://cdn.ampproject.org/v0/amp-brightcove-0.1.js\"></script>\n$0",
+    "description": "Required for amp-brightcove component"
+  },
+
+  "amp-byside-content-script": {
+    "prefix": "amp-byside-content-script",
+    "body": "<script async custom-element=\"amp-byside-content\" src=\"https://cdn.ampproject.org/v0/amp-byside-content-0.1.js\"></script>\n$0",
+    "description": "Required for amp-byside-content component"
+  },
+
+  "amp-call-tracking-script": {
+    "prefix": "amp-call-tracking-script",
+    "body": "<script async custom-element=\"amp-call-tracking\" src=\"https://cdn.ampproject.org/v0/amp-call-tracking-0.1.js\"></script>\n$0",
+    "description": "Required for amp-call-tracking component"
+  },
+
+  "amp-carousel-0.2-script": {
+    "prefix": "amp-carousel-0.2-script",
+    "body": "<script async custom-element=\"amp-carousel\" src=\"https://cdn.ampproject.org/v0/amp-carousel-0.2.js\"></script>\n$0",
+    "description": "Required for amp-carousel-0.2 component"
+  },
+
+  "amp-carousel-0.1-script": {
+    "prefix": "amp-carousel-0.1-script",
+    "body": "<script async custom-element=\"amp-carousel\" src=\"https://cdn.ampproject.org/v0/amp-carousel-0.1.js\"></script>\n$0",
+    "description": "Required for am-carousel-0.1 component"
+  },
+
+  "amp-connatix-player-script": {
+    "prefix": "amp-connatix-player-script",
+    "body": "<script async custom-element=\"amp-connatix-player\" src=\"https://cdn.ampproject.org/v0/amp-connatix-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-connatix-player component"
+  },
+
+  "amp-consent-script": {
+    "prefix": "amp-consent-script",
+    "body": "<script async custom-element=\"amp-consent\" src=\"https://cdn.ampproject.org/v0/amp-consent-0.1.js\"></script>\n$0",
+    "description": "Required for amp-consent component"
+  },
+
+  "amp-dailymotion-script": {
+    "prefix": "amp-dailymotion-script",
+    "body": "<script async custom-element=\"amp-dailymotion\" src=\"https://cdn.ampproject.org/v0/amp-dailymotion-0.1.js\"></script>\n$0",
+    "description": "Required for amp-dailymotion component"
+  },
+
+  "amp-date-countdown-script": {
+    "prefix": "amp-date-countdown-script",
+    "body": "<script async custom-element=\"amp-date-countdown\" src=\"https://cdn.ampproject.org/v0/amp-date-countdown-0.1.js\"></script>\n$0",
+    "description": "Required for amp-date-countdown component"
+  },
+
+  "amp-date-picker-script": {
+    "prefix": "amp-date-picker-script",
+    "body": "<script async custom-element=\"amp-date-picker\" src=\"https://cdn.ampproject.org/v0/amp-date-picker-0.1.js\"></script>\n$0",
+    "description": "Required for amp-date-picker component"
+  },
+
+  "amp-delight-player-script": {
+    "prefix": "amp-delight-player-script",
+    "body": "<script async custom-element=\"amp-delight-player\" src=\"https://cdn.ampproject.org/v0/amp-delight-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-delight-player component"
+  },
+
+  "amp-dynamic-css-classes-script": {
+    "prefix": "amp-dynamic-css-classes-script",
+    "body": "<script async custom-element=\"amp-dynamic-css-classes\" src=\"https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js\"></script>\n$0",
+    "description": "Required for amp-dynamic-css component"
+  },
+
+  "amp-embedly-card-script": {
+    "prefix": "amp-embedly-card-script",
+    "body": "<script async custom-element=\"amp-embedly-card\" src=\"https://cdn.ampproject.org/v0/amp-embedly-card-0.1.js\"></script>\n$0",
+    "description": "Required for amp-embedly-card component"
+  },
+
+  "amp-experiment-script": {
+    "prefix": "amp-experiment-script",
+    "body": "<script async custom-element=\"amp-experiment\" src=\"https://cdn.ampproject.org/v0/amp-experiment-0.1.js\"></script>\n$0",
+    "description": "Required for amp-experiment component"
+  },
+
+  "amp-facebook-comments-script": {
+    "prefix": "amp-facebook-comments-script",
+    "body": "<script async custom-element=\"amp-facebook-comments\" src=\"https://cdn.ampproject.org/v0/amp-facebook-comments-0.1.js\"></script>\n$0",
+    "description": "Required for amp-facebook-comments component"
+  },
+
+  "amp-facebook-like-script": {
+    "prefix": "amp-facebook-like-script",
+    "body": "<script async custom-element=\"amp-facebook-like\" src=\"https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js\"></script>\n$0",
+    "description": "Required for amp-facebook-like component"
+  },
+
+  "amp-facebook-page-script": {
+    "prefix": "amp-facebook-page-script",
+    "body": "<script async custom-element=\"amp-facebook-page\" src=\"https://cdn.ampproject.org/v0/amp-facebook-page-0.1.js\"></script>\n$0",
+    "description": "Required for amp-facebook-page component"
+  },
+
+  "amp-facebook-script": {
+    "prefix": "amp-facebook-script",
+    "body": "<script async custom-element=\"amp-facebook\" src=\"https://cdn.ampproject.org/v0/amp-facebook-0.1.js\"></script>\n$0",
+    "description": "Required for amp-facebook component"
+  },
+
+  "amp-fit-text-script": {
+    "prefix": "amp-fit-text-script",
+    "body": "<script async custom-element=\"amp-fit-text\" src=\"https://cdn.ampproject.org/v0/amp-fit-text-0.1.js\"></script>\n$0",
+    "description": "Required for amp-fit-text component"
+  },
+
+  "amp-font-script": {
+    "prefix": "amp-font-script",
+    "body": "<script async custom-element=\"amp-font\" src=\"https://cdn.ampproject.org/v0/amp-font-0.1.js\"></script>\n$0",
+    "description": "Required for amp-font component"
+  },
+
+  "amp-fx-collection-script": {
+    "prefix": "amp-fx-collection-script",
+    "body": "<script async custom-element=\"amp-fx-collection\" src=\"https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js\"></script>\n$0",
+    "description": "Required for amp-fx-collection component"
+  },
+
+  "amp-fx-flying-carpet-script": {
+    "prefix": "amp-fx-flying-carpet-script",
+    "body": "<script async custom-element=\"amp-fx-flying-carpet\" src=\"https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js\"></script>\n$0",
+    "description": "Required for amp-fx-flying-carpet component"
+  },
+
+  "amp-geo-script": {
+    "prefix": "amp-geo-script",
+    "body": "<script async custom-element=\"amp-geo\" src=\"https://cdn.ampproject.org/v0/amp-geo-0.1.js\"></script>\n$0",
+    "description": "Required for amp-geo component"
+  },
+
+  "amp-gfycat-script": {
+    "prefix": "amp-gfycat-script",
+    "body": "<script async custom-element=\"amp-gfycat\" src=\"https://cdn.ampproject.org/v0/amp-gfycat-0.1.js\"></script>\n$0",
+    "description": "Required for amp-gfycat component"
+  },
+
+  "amp-gist-script": {
+    "prefix": "amp-gist-script",
+    "body": "<script async custom-element=\"amp-gist\" src=\"https://cdn.ampproject.org/v0/amp-gist-0.1.js\"></script>\n$0",
+    "description": "Required for amp-gist component"
+  },
+
+  "amp-google-document-embed-script": {
+    "prefix": "amp-google-document-embed-script",
+    "body": "<script async custom-element=\"amp-google-document-embed\" src=\"https://cdn.ampproject.org/v0/amp-google-document-embed-0.1.js\"></script>\n$0",
+    "description": "Required for amp-google-document-embed component"
+  },
+
+  "amp-google-vrview-image-script": {
+    "prefix": "amp-google-vrview-image-script",
+    "body": "<script async custom-element=\"amp-google-vrview-image\" src=\"https://cdn.ampproject.org/v0/amp-google-vrview-image-0.1.js\"></script>\n$0",
+    "description": "Required for amp-google-vrview-image component"
+  },
+
+  "amp-hulu-script": {
+    "prefix": "amp-hulu-script",
+    "body": "<script async custom-element=\"amp-hulu\" src=\"https://cdn.ampproject.org/v0/amp-hulu-0.1.js\"></script>\n$0",
+    "description": "Required for amp-hulu component"
+  },
+
+  "amp-iframe-script": {
+    "prefix": "amp-iframe-script",
+    "body": "<script async custom-element=\"amp-iframe\" src=\"https://cdn.ampproject.org/v0/amp-iframe-0.1.js\"></script>\n$0",
+    "description": "Required for amp-iframe component"
+  },
+
+  "amp-ima-video-script": {
+    "prefix": "amp-ima-video-script",
+    "body": "<script async custom-element=\"amp-ima-video\" src=\"https://cdn.ampproject.org/v0/amp-ima-video-0.1.js\"></script>\n$0",
+    "description": "Required for amp-ima-video component"
+  },
+
+  "amp-image-lightbox-script": {
+    "prefix": "amp-image-lightbox-script",
+    "body": "<script async custom-element=\"amp-image-lightbox\" src=\"https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js\"></script>\n$0",
+    "description": "Required for amp-image-lightbox component"
+  },
+
+  "amp-image-slider-script": {
+    "prefix": "amp-image-slider-script",
+    "body": "<script async custom-element=\"amp-image-slider\" src=\"https://cdn.ampproject.org/v0/amp-image-slider-0.1.js\"></script>\n$0",
+    "description": "Required for amp-image-slider component"
+  },
+
+  "amp-imgur-script": {
+    "prefix": "amp-imgur-script",
+    "body": "<script async custom-element=\"amp-imgur\" src=\"https://cdn.ampproject.org/v0/amp-imgur-0.1.js\"></script>\n$0",
+    "description": "Required for amp-imgur component"
+  },
+
+  "amp-inputmask-script": {
+    "prefix": "amp-inputmask-script",
+    "body": "<script async custom-element=\"amp-inputmask\" src=\"https://cdn.ampproject.org/v0/amp-inputmask-0.1.js\"></script>\n$0",
+    "description": "Required for amp-inputmask component"
+  },
+
+  "amp-instagram-script": {
+    "prefix": "amp-instagram-script",
+    "body": "<script async custom-element=\"amp-instagram\" src=\"https://cdn.ampproject.org/v0/amp-instagram-0.1.js\"></script>\n$0",
+    "description": "Required for amp-instagram component"
+  },
+
+  "amp-install-serviceworker-script": {
+    "prefix": "amp-install-serviceworker-script",
+    "body": "<script async custom-element=\"amp-install-serviceworker\" src=\"https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js\"></script>$\n0",
+    "description": "Required for amp-install-serviceworker component"
+  },
+
+  "amp-izlesene-script": {
+    "prefix": "amp-izlesene-script",
+    "body": "<script async custom-element=\"amp-izlesene\" src=\"https://cdn.ampproject.org/v0/amp-izlesene-0.1.js\"></script>$\n0",
+    "description": "Required for amp-izlesene component"
+  },
+
+  "amp-jwplayer-script": {
+    "prefix": "amp-jwplayer-script",
+    "body": "<script async custom-element=\"amp-jwplayer\" src=\"https://cdn.ampproject.org/v0/amp-jwplayer-0.1.js\"></script>$\n0",
+    "description": "Required for amp-jwplayer component"
+  },
+
+  "amp-kaltura-player-script": {
+    "prefix": "amp-kaltura-player-script",
+    "body": "<script async custom-element=\"amp-kaltura-player\" src=\"https://cdn.ampproject.org/v0/amp-kaltura-player-0.1.js\"></script>$\n0",
+    "description": "Required for amp-kaltura-player component"
+  },
+
+  "amp-lightbox-script": {
+    "prefix": "amp-lightbox-script",
+    "body": "<script async custom-element=\"amp-lightbox\" src=\"https://cdn.ampproject.org/v0/amp-lightbox-0.1.js\"></script>\n$0",
+    "description": "Required for amp-lightbox component"
+  },
+
+  "amp-link-rewriter-script": {
+    "prefix": "amp-link-rewriter-script",
+    "body": "<script async custom-element=\"amp-link-rewriter\" src=\"https://cdn.ampproject.org/v0/amp-link-rewriter-0.1.js\"></script>\n$0",
+    "description": "Required for amp-link-rewriter component"
+  },
+
+  "amp-list-script": {
+    "prefix": "amp-list-script",
+    "body": [
+      "<script async custom-element=\"amp-list\" src=\"https://cdn.ampproject.org/v0/amp-list-0.1.js\"></script>",
+      "<script async custom-template=\"amp-mustache\" src=\"https://cdn.ampproject.org/v0/amp-mustache-0.2.js\"></script>\n$0"
+    ],
+    "description": "Required for amp-list component"
+  },
+
+  "amp-live-list-script": {
+    "prefix": "amp-live-list-script",
+    "body": "<script async custom-element=\"amp-live-list\" src=\"https://cdn.ampproject.org/v0/amp-live-list-0.1.js\"></script>\n$0",
+    "description": "Required for amp-live-list component"
+  },
+
+  "amp-mathml-script": {
+    "prefix": "amp-mathml-script",
+    "body": "<script async custom-element=\"amp-mathml\" src=\"https://cdn.ampproject.org/v0/amp-mathml-0.1.js\"></script>\n$0",
+    "description": "Required for amp-mathml component"
+  },
+
+  "amp-mega-menu-script": {
+    "prefix": "amp-mega-menu-script",
+    "body": "<script async custom-element=\"amp-mega-menu\" src=\"https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js\"></script>\n$0",
+    "description": "Required for amp-mega-menu component"
+  },
+
+  "amp-megaphone-script": {
+    "prefix": "amp-megaphone-script",
+    "body": "<script async custom-element=\"amp-megaphone\" src=\"https://cdn.ampproject.org/v0/amp-megaphone-0.1.js\"></script>\n$0",
+    "description": "Required for amp-megaphone component"
+  },
+
+  "amp-minute-media-script": {
+    "prefix": "amp-minute-media-script",
+    "body": "<script async custom-element=\"amp-minute-media-player\" src=\"https://cdn.ampproject.org/v0/amp-minute-media-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-minute-media component"
+  },
+
+  "amp-mowplayer-script": {
+    "prefix": "amp-mowplayer-script",
+    "body": "<script async custom-element=\"amp-mowplayer\" src=\"https://cdn.ampproject.org/v0/amp-mowplayer-0.1.js\"></script>\n$0",
+    "description": "Required for amp-mowplayer component"
+  },
+
+  "amp-next-page-script": {
+    "prefix": "amp-next-page-script",
+    "body": "<script async custom-element=\"amp-next-page\" src=\"https://cdn.ampproject.org/v0/amp-next-page-0.1.js\"></script>\n$0",
+    "description": "Required for amp-next-page component"
+  },
+
+  "amp-nexxtv-player-script": {
+    "prefix": "amp-nexxtv-player-script",
+    "body": "<script async custom-element=\"amp-nexxtv-player\" src=\"https://cdn.ampproject.org/v0/amp-nexxtv-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-nexxtv-player component"
+  },
+
+  "amp-o2-player-script": {
+    "prefix": "amp-o2-player-script",
+    "body": "<script async custom-element=\"amp-o2-player\" src=\"https://cdn.ampproject.org/v0/amp-o2-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-o2-player component"
+  },
+
+  "amp-ooyala-player-script": {
+    "prefix": "amp-ooyala-player-script",
+    "body": "<script async custom-element=\"amp-ooyala-player\" src=\"https://cdn.ampproject.org/v0/amp-ooyala-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-ooyala-player component"
+  },
+
+  "amp-orientation-observer-script": {
+    "prefix": "amp-orientation-observer-script",
+    "body": "<script async custom-element=\"amp-orientation-observer\" src=\"https://cdn.ampproject.org/v0/amp-orientation-observer-0.1.js\"></script>\n$0",
+    "description": "Required for amp-orientation-observer component"
+  },
+
+  "amp-pan-zoom-script": {
+    "prefix": "amp-pan-zoom-script",
+    "body": "<script async custom-element=\"amp-pan-zoom\" src=\"https://cdn.ampproject.org/v0/amp-pan-zoom-0.1.js\"></script>\n$0",
+    "description": "Required for amp-pan-zoom component"
+  },
+
+  "amp-pinterest-script": {
+    "prefix": "amp-pinterest-script",
+    "body": "<script async custom-element=\"amp-pinterest\" src=\"https://cdn.ampproject.org/v0/amp-pinterest-0.1.js\"></script>\n$0",
+    "description": "Required for amp-pinterest component"
+  },
+
+  "amp-playbuzz-script": {
+    "prefix": "amp-playbuzz-script",
+    "body": "<script async custom-element=\"amp-playbuzz\" src=\"https://cdn.ampproject.org/v0/amp-playbuzz-0.1.js\"></script>\n$0",
+    "description": "Required for amp-playbuzz component"
+  },
+
+  "amp-position-observer-script": {
+    "prefix": "amp-position-observer-script",
+    "body": "<script async custom-element=\"amp-position-observer\" src=\"https://cdn.ampproject.org/v0/amp-position-observer-0.1.js\"></script>\n$0",
+    "description": "Required for amp-position-observer component"
+  },
+
+  "amp-powr-player-script": {
+    "prefix": "amp-powr-player-script",
+    "body": "<script async custom-element=\"amp-powr-player\" src=\"https://cdn.ampproject.org/v0/amp-powr-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-powr-player component"
+  },
+
+  "amp-reach-player-script": {
+    "prefix": "amp-reach-player-script",
+    "body": "<script async custom-element=\"amp-reach-player\" src=\"https://cdn.ampproject.org/v0/amp-reach-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-reach-player component"
+  },
+
+  "amp-recaptcha-input-script": {
+    "prefix": "amp-recaptcha-input-script",
+    "body": "<script async custom-element=\"amp-recaptcha-input\" src=\"https://cdn.ampproject.org/v0/amp-recaptcha-input-0.1.js\"></script>\n$0",
+    "description": "Required for amp-recaptcha-input component"
+  },
+
+  "amp-redbull-player-script": {
+    "prefix": "amp-rredbull-player-script",
+    "body": "<script async custom-element=\"amp-redbull-player\" src=\"https://cdn.ampproject.org/v0/amp-redbull-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-redbull-player component"
+  },
+
+  "amp-reddit-script": {
+    "prefix": "amp-reddit-script",
+    "body": "<script async custom-element=\"amp-reddit\" src=\"https://cdn.ampproject.org/v0/amp-reddit-0.1.js\"></script>\n$0",
+    "description": "Required for amp-reddit component"
+  },
+
+  "amp-riddle-quiz-script": {
+    "prefix": "amp-riddle-quiz-script",
+    "body": "<script async custom-element=\"amp-riddle-quiz\" src=\"https://cdn.ampproject.org/v0/amp-riddle-quiz-0.1.js\"></script>\n$0",
+    "description": "Required for amp-riddle-quiz component"
+  },
+
+  "amp-script-script": {
+    "prefix": "amp-script-script",
+    "body": "<script async custom-element=\"amp-script\" src=\"https://cdn.ampproject.org/v0/amp-script-0.1.js\"></script>\n$0",
+    "description": "Required for amp-script component"
+  },
+
+  "amp-selector-script": {
+    "prefix": "amp-selector-script",
+    "body": "<script async custom-element=\"amp-selector\" src=\"https://cdn.ampproject.org/v0/amp-selector-0.1.js\"></script>\n$0",
+    "description": "Required for amp-selector component"
+  },
+
+  "amp-sidebar-script": {
+    "prefix": "amp-sidebar-script",
+    "body": "<script async custom-element=\"amp-sidebar\" src=\"https://cdn.ampproject.org/v0/amp-sidebar-0.1.js\"></script>\n$0",
+    "description": "Required for amp-sidebar component"
+  },
+
+  "amp-skimlinks-script": {
+    "prefix": "amp-skimlinks-script",
+    "body": "<script async custom-element=\"amp-skimlinks\" src=\"https://cdn.ampproject.org/v0/amp-skimlinks-0.1.js\"></script>\n$0",
+    "description": "Required for amp-skimlinks component"
+  },
+
+  "amp-smartlinks-script": {
+    "prefix": "amp-smartlinks-script",
+    "body": "<script async custom-element=\"amp-smartlinks\" src=\"https://cdn.ampproject.org/v0/amp-smartlinks-0.1.js\"></script>\n$0",
+    "description": "Required for amp-smartlinks component"
+  },
+
+  "amp-social-share-script": {
+    "prefix": "amp-social-share-script",
+    "body": "<script async custom-element=\"amp-social-share\" src=\"https://cdn.ampproject.org/v0/amp-social-share-0.1.js\"></script>\n$0",
+    "description": "Required for amp-social-share component"
+  },
+
+  "amp-soundcloud-script": {
+    "prefix": "amp-soundcloud-script",
+    "body": "<script async custom-element=\"amp-soundcloud\" src=\"https://cdn.ampproject.org/v0/amp-soundcloud-0.1.js\"></script>\n$0",
+    "description": "Required for amp-soundcloud component"
+  },
+
+  "amp-springboard-player-script": {
+    "prefix": "amp-springboard-player-script",
+    "body": "<script async custom-element=\"amp-springboard-player\" src=\"https://cdn.ampproject.org/v0/amp-springboard-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-springboard-player component"
+  },
+
+  "amp-sticky-ad-script": {
+    "prefix": "amp-sticky-ad-script",
+    "body": "<script async custom-element=\"amp-sticky-ad\" src=\"https://cdn.ampproject.org/v0/amp-sticky-ad-0.1.js\"></script>\n$0",
+    "description": "Required for amp-sticky-ad component"
+  },
+
+  "amp-story-auto-ads-script": {
+    "prefix": "amp-story-auto-ads-script",
+    "body": "<script async custom-element=\"amp-story-auto-ads\" src=\"https://cdn.ampproject.org/v0/amp-story-auto-ads-0.1.js\"></script>\n$0",
+    "description": "Required for amp-story-auto-ads component"
+  },
+
+  "amp-subscriptions-script": {
+    "prefix": "amp-subscriptions-script",
+    "body": [
+      "<script async custom-element=\"amp-subscriptions\" src=\"https://cdn.ampproject.org/v0/amp-subscriptions-0.1.js\"></script>",
+      "<script async custom-element=\"amp-subscriptions-google\" src=\"https://cdn.ampproject.org/v0/amp-subscriptions-google-0.1.js\"></script>\n$0"
+    ],
+    "description": "Required for amp-subscriptions component"
+  },
+
+  "amp-timeago-script": {
+    "prefix": "amp-timeago-script",
+    "body": "<script async custom-element=\"amp-timeago\" src=\"https://cdn.ampproject.org/v0/amp-timeago-0.1.js\"></script>\n$0",
+    "description": "Required for amp-timeago component"
+  },
+
+  "amp-truncate-text-script": {
+    "prefix": "amp-truncate-text-script",
+    "body": "<script async custom-element=\"amp-truncate-text\" src=\"https://cdn.ampproject.org/v0/amp-truncate-text-0.1.js\"></script>\n$0",
+    "description": "Required for amp-truncate-text component"
+  },
+
+  "amp-twitter-script": {
+    "prefix": "amp-twitter-script",
+    "body": "<script async custom-element=\"amp-twitter\" src=\"https://cdn.ampproject.org/v0/amp-twitter-0.1.js\"></script>\n$0",
+    "description": "Required for amp-twitter component"
+  },
+
+  "amp-user-notification-script": {
+    "prefix": "amp-user-notification-script",
+    "body": "<script async custom-element=\"amp-user-notification\" src=\"https://cdn.ampproject.org/v0/amp-user-notification-0.1.js\"></script>\n$0",
+    "description": "Required for amp-user-notification component"
+  },
+
+  "amp-video-docking-script": {
+    "prefix": "amp-video-docking-script",
+    "body": [
+      "<script async custom-element=\"amp-video\" src=\"https://cdn.ampproject.org/v0/amp-video-0.1.js\"></script>",
+      "<script async custom-element=\"amp-video-docking\" src=\"https://cdn.ampproject.org/v0/amp-video-docking-0.1.js\"></script>\n$0"
+    ],
+    "description": "Required for amp-video-docking component"
+  },
+
+  "amp-video-iframe-script": {
+    "prefix": "amp-video-iframe-script",
+    "body": [
+      "<script async custom-element=\"amp-video\" src=\"https://cdn.ampproject.org/v0/amp-video-0.1.js\"></script>",
+      "<script async custom-element=\"amp-video-iframe\" src=\"https://cdn.ampproject.org/v0/amp-video-iframe-0.1.js\"></script>\n$0"
+    ],
+    "description": "Required for amp-video-iframe component"
+  },
+
+  "amp-video-script": {
+    "prefix": "amp-video-script",
+    "body": "<script async custom-element=\"amp-video\" src=\"https://cdn.ampproject.org/v0/amp-video-0.1.js\"></script>\n$0",
+    "description": "Required for amp-video component"
+  },
+
+  "amp-vimeo-script": {
+    "prefix": "amp-vimeo-script",
+    "body": "<script async custom-element=\"amp-vimeo\" src=\"https://cdn.ampproject.org/v0/amp-vimeo-0.1.js\"></script>\n$0",
+    "description": "Required for amp-vimeo component"
+  },
+
+  "amp-vine-script": {
+    "prefix": "amp-vine-script",
+    "body": "<script async custom-element=\"amp-vine\" src=\"https://cdn.ampproject.org/v0/amp-vine-0.1.js\"></script>\n$0",
+    "description": "Required for amp-vine component"
+  },
+
+  "amp-viqeo-player-script": {
+    "prefix": "amp-viqeo-player-script",
+    "body": "<script async custom-element=\"amp-viqeo-player\" src=\"https://cdn.ampproject.org/v0/amp-viqeo-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-viqeo-player component"
+  },
+
+  "amp-vk-script": {
+    "prefix": "amp-vk-script",
+    "body": "<script async custom-element=\"amp-vk\" src=\"https://cdn.ampproject.org/v0/amp-vk-0.1.js\"></script>\n$0",
+    "description": "Required for amp-vk component"
+  },
+
+  "amp-web-push-script": {
+    "prefix": "amp-web-push-script",
+    "body": "<script async custom-element=\"amp-web-push\" src=\"https://cdn.ampproject.org/v0/amp-web-push-0.1.js\"></script>\n$0",
+    "description": "Required for amp-web-push component"
+  },
+
+  "amp-wistia-player-script": {
+    "prefix": "amp-wistia-player-script",
+    "body": "<script async custom-element=\"amp-wistia-player\" src=\"https://cdn.ampproject.org/v0/amp-wistia-player-0.1.js\"></script>\n$0",
+    "description": "Required for amp-wistia-player component"
+  },
+
+  "amp-yotpo-script": {
+    "prefix": "amp-yotpo-script",
+    "body": "<script async custom-element=\"amp-yotpo\" src=\"https://cdn.ampproject.org/v0/amp-yotpo-0.1.js\"></script>\n$0",
+    "description": "Required for amp-yotpo component"
+  },
+
+  "amp-youtube-script": {
+    "prefix": "amp-youtube-script",
+    "body": "<script async custom-element=\"amp-youtube\" src=\"https://cdn.ampproject.org/v0/amp-youtube-0.1.js\"></script>\n$0",
+    "description": "Required for amp-youtube component"
+  },
+
+  "amp-3d-gltf": {
+    "prefix": "amp-3d-gltf",
+    "description": "Displays GL Transmission Format (gITF) 3D models",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-3d-gltf/ -->",
+      "<amp-3d-gltf",
+      "  width=\"$1\"",
+      "  height=\"$2\"",
+      "  layout=\"${3:responsive}\"",
+      "  alpha=\"${4:true}\"",
+      "  antialiasing=\"${5:true}\"",
+      "  src=\"$6\">",
+      "</amp-3d-gltf>\n$0"
+    ]
+  },
+
+  "amp-3q-player": {
+    "prefix": "amp-3q-player",
+    "description": "Embeds videos from 3Q SDN",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-3q-player/ -->",
+      "<amp-3q-player",
+      "  width=\"$1\"",
+      "  height=\"$2\"",
+      "  layout=\"${3:responsive}\"",
+      "  data-id=\"$4\">",
+      "</amp-3q-player>\n$0"
+    ]
+  },
+
+  "amp-access-laterpay": {
+    "prefix": "amp-access-laterpay",
+    "description": "Allows publishers to easily integrate with the LaterPay micropayments platform. Requires amp-access script, amp-analytics script, amp-laterpay script in the HEAD section",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-access-laterpay/ -->",
+      "<script id=\"amp-access\" type=\"application/json\">",
+      "  {",
+      "   \"vendor\": \"laterpay\",",
+      "   \"laterpay\": {",
+      "     \"articleTitleSelector\": \"${1:unique-id}\",",
+      "     \"articleId\":\"${2:some-id}\",",
+      "     \"jwt\":\"${3:JWT-TOKEN}\",",
+      "     \"locale\":\"${4:LOCALE}\",",
+      "     \"localeMessages\": { \"${5:MESSAGE-KEY}\": \"${6:locale-specific-message}\" },",
+      "     \"sandbox\": true",
+      "     }",
+      "  }",
+      "</script>\n$0"
+    ]
+  },
+
+  "amp-access-poool": {
+    "prefix": "amp-access-poool",
+    "description": "The amp-access-poool component, based on amp-access, loads and shows a paywall using your bundleID from Poool's Dashboard configuration. Requires amp-access script, amp-poool script in the HEAD section",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-access-poool/ -->",
+      "<script id=\"amp-access\" type=\"application/json\">",
+      "  {",
+      "   \"vendor\": \"poool\",",
+      "   \"poool\": {",
+      "     \"bundleID\": \"${1:YOUR_APP_ID_PROVIDED_BY_POOOL}\",",
+      "     \"itemID\": \"${2:amp-example-article}\",",
+      "     \"pageType\": \"${3:PREMIUM}\",",
+      "     \"debug\": \"${4:false}\",",
+      "     \"forceWidget\": \"${5:auto|hidden|disabled|none|video|newsletter|subscription|gift|restriction|question|unlock|link|pass|invisible}\",",
+      "     \"loginButtonEnabled\": \"${6:true}\",",
+      "     \"signatureEnabled\": \"${7:true}\",",
+      "     \"videoClient\": \"${8:vast|googima}\",",
+      "     \"customSegment\": \"${9:}\",",
+      "     \"cookiesEnabled\": \"${10:false}\"",
+      "     }",
+      "  }",
+      "</script>\n$0"
+    ]
+  },
+
+  "amp-access": {
+    "prefix": "amp-access",
+    "description": "AMP Access or “AMP paywall and subscription support” gives Publishers control over which content can be accessed by a reader. Requires amp-access script in the HEAD section",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-access/ -->",
+      "<script id=\"amp-access\" type=\"application/json\">",
+      "  {",
+      "   \"authorization\": \"${1:AUTH-URL}\",",
+      "   \"pingback\": \"${2:PINGBACK-URL}\",",
+      "   \"login\": \"${3:LOGIN-URL\",",
+      "   \"vendor\": \"poool\",",
+      "   \"authorizationFallbackResponse\": {",
+      "     \"error\": \"${4:false}\",",
+      "     }",
+      "  }",
+      "</script>\n$0"
+    ]
+  },
+
+  "amp-accordion": {
+    "prefix": "amp-accordion",
+    "description": "Provides a way for viewers to glance at the content outline and jump to any section. Add amp-accordion script in the HEAD section",
+    "body": [
+      "<!-- https://amp.dev/documentation/components/amp-accordion/ -->",
+      "<amp-accordion class=\"sample\" ${1:disable-session-states} ${2:animate} ${3:expand-single-section}>",
+      "  <section expanded>",
+      "    <h4>${4:SECTION_TITLE1}</h4>",
+      "    <div>${5:CONTENT1}</div>",
+      "  </section>",
+      "  <section>",
+      "    <h4>${6:SECTION_TITLE2}</h4>",
+      "    <div>${7:CONTENT2}</div>",
+      "  </section>",
+      "  $0",
+      "</amp-accordion>"
+    ]
+  },
+
+  "amp-analytics": {
+    "prefix": "amp-analytics",
+    "description": "Capture analytics data from an AMP document. Requires amp-analytics script in the HEAD section",
+    "body": [
+      "<!-- https://amp.dev/documentation/components/amp-analytics/ -->",
+      "<amp-analytics type=\"$1\" id=\"$2\" config=\"$3\" data-credentials=\"include\">",
+      "  <script type=\"application/json\">",
+      "    {",
+      "      \"vars\": {",
+      "        \"gtag_id\": \"${4:GA_MEASUREMENT_ID}\",",
+      "        \"config\": {",
+      "          \"${5:GA_MEASUREMENT_ID}\": {",
+      "          \"groups\": \"default\"",
+      "          }",
+      "        }",
+      "      },",
+      "      \"requests\": {",
+      "        ",
+      "      },",
+      "      \"transport\": {",
+      "        ",
+      "      },",
+      "      \"extraUrlParams\": {",
+      "        \"$6\": \"$7\"",
+      "        ",
+      "      },",
+      "      \"triggers\": {",
+      "        \"${8:TRIGGER_NAME}\": {",
+      "          \"selector\": \"#${9:SELECTOR_ID}\",",
+      "          \"on\": \"${10:EVENT}\",",
+      "          \"vars\": {",
+      "            \"event_name\": \"$11\",",
+      "            \"method\": \"$12\"",
+      "          }",
+      "        }",
+      "      }",
+      "    }",
+      "  </script>",
+      "</amp-analytics>\n$0"
+    ]
+  },
+
+  "amp-action-macro": {
+    "prefix": "amp-action-macro",
+    "description": "Creates reusable actions. Requires amp-action script in the HEAD section",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-action-macro/ -->",
+      "<amp-action-macro id=\"$1\" execute=\"$2\" arguments=\"$3\">",
+      "</amp-action-macro>\n$0"
+    ]
+  },
+
+  "amp-ad-exit": {
+    "prefix": "amp-ad-exit",
+    "description": "The amp-ad-exit element is configured with a JSON child script element and exposes an 'exit' action to other elements in the AMPHTML ad. Requires amp-ad-exit script in the HEAD section",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-ad-exit/ -->",
+      "<amp-ad-exit id=\"$1\"><!--Ref: https://amp.dev/documentation/components/amp-ad-exit/-->",
+      "  <script type=\"application/json\">",
+      "    {",
+      "      \"target\": {",
+      "        $0",
+      "      },",
+      "      \"filters\": {",
+      "        ",
+      "      },",
+      "      \"transports\": {",
+      "        ",
+      "      }",
+      "    }",
+      "  </script>",
+      "</amp-ad-exit>"
+    ]
+  },
+
+  "amp-ad": {
+    "prefix": "amp-ad",
+    "description": "A container to display an ad. Requires amp-ad script in the HEAD section",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-ad/ -->",
+      "<amp-ad type=\"$1\" width=\"$2\" height=\"$3\" layout=\"$4\" data-publisher=\"$5\">",
+      "  <div placeholder>Loading ...</div>",
+      "</amp-ad>\n$0"
+    ]
+  },
+
+  "amp-embed": {
+    "prefix": "amp-embed",
+    "description": "The amp-embed is an alias to the amp-ad tag.  Use amp-embed when semantically more accurate. AMP documents only support ads/embeds served via HTTPS. Requires amp-ad script in the HEAD section",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-ad/ -->",
+      "<amp-embed type=\"$1\" width=\"$2\" height=\"$3\" layout=\"$4\" data-publisher=\"$5\">",
+      "  <div placeholder>Loading ...</div>",
+      "</amp-embed>\n$0"
+    ]
+  },
+
+  "amp-addthis": {
+    "prefix": "amp-addthis",
+    "description": "Displays AddThis customizable social share buttons. Requires amp-addthis script in the HEAD section",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-addthis/ -->",
+      "<amp-addthis data-widget-type=\"${1:floating|inline}\" width=\"$2\" height=\"$3\" layout=\"${4:responsive}\" data-pub-id=\"$5\" data-widget-id=\"$6\">",
+      "</amp-addthis>\n$0"
+    ]
+  },
+
+  "amp-anim": {
+    "prefix": "amp-anim",
+    "description": "A runtime-managed animated image, typically a GIF. Requires amp-anim script in the HEAD section",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-anim/ -->",
+      "<amp-anim width=\"$1\" height=\"$2\" src=\"$3\" alt=\"$5\" attribution=\"$6\" layout=\"$7\">",
+      "  <amp-img placeholder width=\"$1\" height=\"$2\" src=\"$8\"></amp-img>",
+      "</amp-anim>\n$0"
+    ]
+  },
+
+  "amp-app-banner": {
+    "prefix": "amp-app-banner",
+    "description": "A wrapper and minimal UI for a cross-platform, fixed-position banner showing a call-to-action to install an app",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-app-banner/ -->",
+      "<amp-app-banner layout=\"${1:nodisplay}\" id=\"$2\">",
+      "  <amp-img src=\"${3:https://}\" width=\"$4\" height=\"$5\"></amp-img>",
+      "  <h3>$6</h3>",
+      "  <p>Experience a richer experience on our mobile app!</p>",
+      "  <div class=\"$7\">",
+      "    <button open-button>${8:Get the app}</button>",
+      "  </div>",
+      "</amp-app-banner>\n$0"
+    ]
+  },
+
+  "amp-animation": {
+    "prefix": "amp-animation",
+    "description": "Defines and runs animations",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-animation/ -->",
+      "<amp-animation id=\"$1\" layout=\"nodisplay\">",
+      "  <script type=\"application/json\">",
+      "    {",
+      "       ",
+      "       \"duration\": \"$2s\",",
+      "       \"delay\": $3,",
+      "       \"endDelay\": \"var(--end-delay, $4ms)\",",
+      "       \"easing\": \"ease-in\",",
+      "       \"iterations\": $5,",
+      "       \"iterationStart\": $6,",
+      "       \fill\": \"both\",",
+      "       \"animations\": [",
+      "         {",
+      "           ",
+      "         },",
+      "         {",
+      "           ",
+      "         }",
+      "       ]",
+      "    }",
+      "  </script>",
+      "</amp-animation>\n$0"
+    ]
+  },
+
+  "amp-apester-media": {
+    "prefix": "amp-apester-media",
+    "description": "Displays a Apester smart unit",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-apester-media/ -->",
+      "<amp-apester-media height=\"$1\" data-apester-media-id=\"$2\" data-apester-channel-token=\"#3\"> </amp-apester-media>\n$0"
+    ]
+  },
+
+  "amp-audio": {
+    "prefix": "amp-audio",
+    "description": "A replacement for the HTML5 audio tag. The amp-audio component is only to be used for direct HTML5 audio file embeds",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-audio/ -->",
+      "<amp-audio width=\"$1\" height=\"$2\" src=\"$3\" artwork=\"$4\" title=\"$5\" artist=\"$6\" album=\"$7\">",
+      "  <source type=\"audio/mpeg\" src=\"foo.mp3\" />",
+      "</amp-audio>\n$0"
+    ]
+  },
+
+  "amp-auto-ads": {
+    "prefix": "amp-auto-ads",
+    "description": "Dynamically injects ads into an AMP page by using a remotely-served configuration file",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-auto-ads/-->",
+      "<amp-auto-ads type=\"${1:adsense|denaKop|doubleclick}\" data-$2=\"$3\">",
+      "</amp-auto-ads>\n$0"
+    ]
+  },
+
+  "amp-autocomplete": {
+    "prefix": "amp-autocomplete",
+    "description": "For suggesting completed items based on user input to help users carry out their task more quickly",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-autocomplete/-->",
+      "<amp-autocomplete filter=\"${1:substring}\" min-characters=\"$2\" id=\"$3\">",
+      "  <input />",
+      "  <script type=\"application/json\">",
+      "    {\"items\": [\"$5\", \"$6\", \"$7\"]}",
+      "  </script>",
+      "</amp-autocomplete>\n$0"
+    ]
+  },
+
+  "amp-base-carousel": {
+    "prefix": "amp-base-carousel",
+    "description": "[Experimental] You must turn on the amp-base-carousel experiment to use this component. A generic carousel for displaying multiple similar pieces of content along a horizontal or vertical axis",
+    "body": [
+      "<!-- Experimental Ref: https://amp.dev/documentation/components/amp-autocomplete/-->",
+      "<amp-base-carousel attr-name=\"$1\"></amp-base-carousel>\n$0"
+    ]
+  },
+
+  "amp-beopinion": {
+    "prefix": "amp-beopinion",
+    "description": "Embeds BeOpinion content",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-beopinion/-->",
+      "<amp-beopinion width=\"$1\" height=\"$2\" layout=\"${3:responsive}\" data-account=\"$4\" data-content=\"$5\" data-name=\"$6\">",
+      "</amp-beopinion>\n$0"
+    ]
+  },
+
+  "amp-bodymovin-animation": {
+    "prefix": "amp-bodymovin-animation",
+    "description": "Displays an AirBnB Bodymovin animation player, which renders an animation from JSON generated by Adobe After Effects",
+    "body": [
+      "<amp-bodymovin-animation layout=\"$1\" width=\"$2\" height=\"$3\" src=\"$4\" loop=\"$5\">",
+      "</amp-bodymovin-animation>\n$0"
+    ]
+  },
+
+  "amp-brid-player": {
+    "prefix": "amp-brid-player",
+    "description": "An amp-brid-player displays the Brid Player used in Brid.tv Video Platform",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-brid-player/-->",
+      "<amp-brid-player data-partner=\"$1\" data-player=\"$2\" data-video=\"$3\" layout=\"${4:responsive}\" width=\"$5\" height=\"$6\">",
+      "</amp-brid-player>\n$0"
+    ]
+  },
+
+  "amp-brightcove": {
+    "prefix": "amp-brightcove",
+    "description": "The amp-brightcove component allows embedding a Brightcove Video Cloud or Perform player",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-brightcove/ -->",
+      "<amp-brightcove data-account=\"$1\" data-player=\"${2:default}\" data-embed=\"${3:default}\" data-video-id=\"$4\" layout=\"${5:responsive}\" width=\"$6\" height=\"$7\">",
+      "</amp-brightcove>\n$0"
+    ]
+  },
+
+  "amp-byside-content": {
+    "prefix": "amp-byside-content",
+    "description": "The amp-byside-content component is available for BySide customers and displays dynamic content that can be retrieved from the BySide customization mechanisms",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-byside-content/ -->",
+      "<amp-byside-content data-webcare-id=\"$1\" data-label=\"${2:amp-responsive}\" data-lang=\"${3:en}\" width=\"$4\" height=\"$5\" layout=\"${6:responsive}\">",
+      "</amp-byside-content>\n$0"
+    ]
+  },
+
+  "amp-call-tracking": {
+    "prefix": "amp-call-tracking",
+    "description": "Dynamically replaces a phone number in a hyperlink to enable call tracking. Executes a CORS request to substitute the number",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-call-tracking/ -->",
+      "<amp-call-tracking config=\"$1\">",
+      "  <a href=\"tel:$2\">$3</a>",
+      "</amp-call-tracking>\n$0"
+    ]
+  },
+
+  "amp-carousel": {
+    "prefix": "amp-carousel",
+    "description": "A generic carousel for displaying multiple similar pieces of content along a horizontal axis; meant to be flexible and performant",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-carousel/ -->",
+      "<amp-carousel width=\"$1\" height=\"$2\" layout=\"${3:responsive}\" type=\"${4:slides}\">",
+      "  <amp-img src=\"$5\" width=\"$6\" height=\"$7\"></amp-img>",
+      "  <amp-img src=\"$8\" width=\"$9\" height=\"$10\"></amp-img>",
+      "  <amp-img src=\"$11\" width=\"$12\" height=\"$13\"></amp-img>",
+      "</amp-carousel>\n$0"
+    ]
+  },
+
+  "amp-connatix-player": {
+    "prefix": "amp-connatix-player",
+    "description": "Displays a cloud-hosted Connatix Player",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-connatix-player/-->",
+      "<amp-connatix-player data-player-id=\"$1\" layout=\"${2:responsive}\" width=\"$3\" height=\"$4\">",
+      "</amp-connatix-player>\n$0"
+    ]
+  },
+
+  "amp-consent": {
+    "prefix": "amp-consent",
+    "description": "Provides the ability to collect and store a user's consent through a UI control. Also provides the ability to block other AMP components based on the user's consent",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-consent/ -->",
+      "<amp-consent layout=\"${1:nodisplay}\" id=\"$2\">",
+      "  <script type=\"application/json\">",
+      "    {",
+      "      \"consentInstanceId\": \"$3\",",
+      "      \"consentRequired\": \"${4:remote}\",",
+      "      \"checkConsentHref\": \"$5\",",
+      "      \"promptUI\": \"$6\",",
+      "      \"onUpdateHref\": \"$7\"",
+      "    }",
+      "  </script>",
+      "  <div id=\"consent-ui\">",
+      "    <button on=\"tap:$2.accept\" role=\"button\">Accept</button>",
+      "    <button on=\"tap:$2.reject\" role=\"button\">Reject</button>",
+      "    <button on=\"tap:$2.dismiss\" role=\"button\">Dismiss</button>",
+      "  </div>",
+      "</amp-consent>\n$0"
+    ]
+  },
+
+  "amp-dailymotion": {
+    "prefix": "amp-dailymotion",
+    "description": "Displays a Dailymotion video",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-dailymotion/ -->",
+      "<amp-dailymotion data-videoid=\"$1\" layout=\"${2:responsive}\" data-ui-logo=\"${3:false}\" data-info=\"${4:false}\" width=\"$5\" height=\"$6\">",
+      "</amp-dailymotion>\n$0"
+    ]
+  },
+
+  "amp-date-countdown": {
+    "prefix": "amp-date-countdown",
+    "description": "Display a sequence of backward counting to indicate the time remaining before an event is scheduled to occur",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-date-countdown/ -->",
+      "<amp-date-countdown timestamp-seconds=\"$1\" layout=\"${2:fixed-height}\" height=\"$3\">",
+      "  <template type=\"amp-mustache\">",
+      "    <p class=\"p1\">",
+      "      {{d}} days, {{h}} hours, {{m}} minutes and {{s}} seconds until",
+      "      <a href=\"$4\">Y2K38</a>",
+      "    </p>",
+      "  </template>",
+      "</amp-date-countdown>\n$0"
+    ]
+  },
+
+  "amp-date-picker": {
+    "prefix": "amp-date-picker",
+    "description": "Renders a calendar on a page that a user can select dates from",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-date-picker/ -->",
+      "<form method=\"post\" action-xhr=\"$1\" target=\"_blank\">",
+      "  <amp-date-picker mode=\"${2:overlay}\" layout=\"${3:container}\" input-selector=\"[name=${4:deliverydate}]\">",
+      "    <label for=\"${4:deliverydate}\">Deliver Date:</label>",
+      "    <input type=\"text\" name=\"${4:deliverydate}\" />",
+      "  </amp-date-picker>",
+      "</form>\n$0"
+    ]
+  },
+
+  "amp-delight-player": {
+    "prefix": "amp-delight-player",
+    "description": "The amp-delight-player element displays a cloud-hosted Delight Player",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-delight-player/ -->",
+      "<amp-delight-player data-content-id=\"$1\" layout=\"${2:responsive}\" width=\"$3\" height=\"$4\">",
+      "</amp-delight-player>\n$0"
+    ]
+  },
+
+  "amp-embedly-card": {
+    "prefix": "amp-embedly-card",
+    "description": "Provides responsive and shareable embeds to drive the reach of your websites, blog posts, and articles from any URL using Embedly cards",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-embedly-card/ -->",
+      "<amp-embedly-card data-url=\"$1\" layout=\"${2:responsive}\" width=\"$3\" height=\"$4\" data-card-theme=\"$5\" data-card-controls=\"$6\">",
+      "</amp-embedly-card>\n$0"
+    ]
+  },
+
+  "amp-experiment": {
+    "prefix": "amp-experiment",
+    "description": "Conduct user experience experiments (such as A/B testing and multivariate testing) on an AMP document and collect corresponding data with amp-pixel or amp-analytics",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-experiment/-->",
+      "<amp-experiment>",
+      "  <script type=\"application/json\">",
+      "    {",
+      "      \"aExperiment\": {",
+      "        \"sticky\": true,",
+      "        \"consentNotificationId\": \"consent-notif\",",
+      "        \"variants\": {",
+      "          \"treatment1\": ${3:10},",
+      "          \"treatment2\": ${4:10},",
+      "          \"treatment3\": ${5:10}",
+      "        }",
+      "      },",
+      "      \"bExperiment\": {",
+      "        ",
+      "      }",
+      "    }",
+      "  </script>",
+      "</amp-experiment>\n$0"
+    ]
+  },
+
+  "amp-facebook-comments": {
+    "prefix": "amp-facebook-comments",
+    "description": "Embeds the Facebook comments plugin",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-facebook-comments/ -->",
+      "<amp-facebook-comments width=\"$1\" height=\"$2\" layout=\"${3:responsive}\" data-numposts=\"$4\" data-href=\"$5\">",
+      "</amp-facebook-comments>\n$0"
+    ]
+  },
+
+  "amp-facebook-like": {
+    "prefix": "amp-facebook-like",
+    "description": "To embed the Facebook like button plugin",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-facebook-like/-->",
+      "<amp-facebook-like width=\"$1\" height=\"$2\" layout=\"${3:fixed}\" data-layout=\"${4:button_count}\" data-href=\"$5\">",
+      "</amp-facebook-like>\n$0"
+    ]
+  },
+
+  "amp-facebook-page": {
+    "prefix": "amp-facebook-page",
+    "description": "To embed the Facebook page plugin",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-facebook-page/ -->",
+      "<amp-facebook-page width=\"$1\"",
+      "  height=\"$2\"",
+      "  layout=\"${3:responsive}\"",
+      "  data-tabs=\"${4:timeline, events, messages}\"",
+      "  data-href=\"https://www.facebook.com/${5:PAGE_URL}\">",
+      "</amp-facebook-page>\n$0"
+    ]
+  },
+
+  "amp-facebook": {
+    "prefix": "amp-facebook",
+    "description": "Displays a Facebook post, video or comment",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-facebook/ -->",
+      "<amp-facebook width=\"$1\" height=\"$2\"",
+      "  layout=\"${3:responsive}\"",
+      "  data-embed-as=\"$4\"",
+      "  data-href=\"https://www.facebook.com/${5:CONTENT_URL}\">",
+      "</amp-facebook>\n$0"
+    ]
+  },
+
+  "amp-fit-text": {
+    "prefix": "amp-fit-text",
+    "description": "Expands or shrinks its font size to fit the content within the space given to it",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-fit-text/ -->",
+      "<amp-fit-text width=\"$1\" height=\"$2\" layout=\"${3:responsive}\">",
+      "  $0",
+      "</amp-fit-text>\n$0"
+    ]
+  },
+
+  "amp-font": {
+    "prefix": "amp-font",
+    "description": "Trigger and monitor the loading of custom fonts on AMP pages",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-font/ -->",
+      "<amp-font",
+      "  layout=\"nodisplay\"",
+      "  font-family=\"$1\"",
+      "  timeout=\"$2\"",
+      "  on-error-remove-class=\"$3\"",
+      "  on-error-add-class=\"$4\"",
+      "  on-load-remove-class=\"$5\"",
+      "  on-load-add-class=\"$6\">",
+      "</amp-font>\n$0"
+    ]
+  },
+
+  "amp-form": {
+    "prefix": "amp-form",
+    "description": "Allows to create forms (<form>) to submit input fields in an AMP document",
+    "body": [
+      " <!-- Ref: https://amp.dev/documentation/components/amp-form/ -->",
+      "<form method=\"post\"",
+      "  action-xhr=\"$1\"",
+      "  target=\"_top\">",
+      "  <fieldset>",
+      "    <label>",
+      "      <span>Name:</span>",
+      "      <input type=\"text\"",
+      "        name=\"name\"",
+      "        required>",
+      "    </label>",
+      "    <label>",
+      "      <span>Email:</span>",
+      "      <input type=\"email\"",
+      "        name=\"email\"",
+      "        required>",
+      "    </label>",
+      "    <input type=\"submit\"",
+      "      value=\"Subscribe\">",
+      "  </fieldset>",
+      "  <div submit-success>",
+      "    <template type=\"amp-mustache\">",
+      "     Subscription successful!",
+      "    </template>",
+      "  </div>",
+      "  <div submit-error>",
+      "    <template type=\"amp-mustache\">",
+      "      Subscription failed!",
+      "    </template>",
+      "  </div>",
+      "</form>\n$0"
+    ]
+  },
+
+  "amp-fx-collection": {
+    "prefix": "amp-fx-collection",
+    "description": "Provides a collection of preset visual effects, such as parallax",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-fx-collection/ -->",
+      "<div amp-fx=\"fade-in\" data-duration=\"$1ms\" data-easing=\"$2\" data-margin-start=\"$3\">",
+      "  <amp-img width=\"$4\" height=\"$5\" layout=\"${6:responsive}\" src=\"$7\"></amp-img>",
+      "</div>\n$0"
+    ]
+  },
+
+  "amp-fx-flying-carpet": {
+    "prefix": "amp-fx-flying-carpet",
+    "description": "A flying carpet wraps its children in a unique full-screen scrolling container",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-fx-flying-carpet/ -->",
+      "<amp-fx-flying-carpet height=\"$1px\">",
+      "  <amp-img src=\"$2\" width=\"$3\" height=\"$4\" layout=\"${5:responsive}\"></amp-img>",
+      "</amp-fx-flying-carpet>\n$0"
+    ]
+  },
+
+  "amp-geo": {
+    "prefix": "amp-geo",
+    "description": "Provides an approximate country-level geolocation interface",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-geo/ -->",
+      "<amp-geo layout=\"nodisplay\">",
+      "  <script type=\"application/json\">",
+      "    {",
+      "      \"ISOCountryGroups\": {",
+      "        \"eea\": [ \"preset-eea\" ],",
+      "        \"myList\": [ \"preset-eea\", \"ca\", \"au\", \"nz\" ]",
+      "      }",
+      "    }",
+      "  </script>",
+      "</amp-geo>\n$0"
+    ]
+  },
+
+  "amp-gfycat": {
+    "prefix": "amp-gfycat",
+    "description": "Displays a Gfycat video GIF",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-gfycat/-->",
+      "<amp-gfycat data-gfyid=\"$1\" width=\"$2\" height=\"$3\" layout=\"${4:responsive}\">",
+      "</amp-gfycat>\n$0"
+    ]
+  },
+
+  "amp-gist": {
+    "prefix": "amp-gist",
+    "description": "Displays a GitHub Gist",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-gist/ -->",
+      "<amp-gist data-gistid=\"$1\" layout=\"${2:fixed-height}\" height=\"$3\">",
+      "</amp-gist>\n$0"
+    ]
+  },
+
+  "amp-google-document-embed": {
+    "prefix": "amp-google-document-embed",
+    "description": "Displays document files like Word documents, Excel spreadsheets, and PDFs.",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-google-document-embed/ -->",
+      "<amp-google-document-embed src=\"$1\" width=\"$2\" height=\"$3\" layout=\"${4:responsive}\">",
+      "</amp-google-document-embed>\n$0"
+    ]
+  },
+
+  "amp-google-vrview-image": {
+    "prefix": "amp-google-vrview-image",
+    "description": "[Experimental] You must turn on the amp-google-vrview-image experiment to use this component. Display VR image",
+    "body": [
+      "<!-- [Experimental] Ref: https://amp.dev/documentation/components/amp-google-vrview-image/ -->",
+      "<amp-google-vrview-image src=\"$1\" stereo width=\"$2\" yao = \"$3\" height=\"$4\" layout=\"${5:responsive}\">",
+      "</amp-google-vrview-image>\n$0"
+    ]
+  },
+
+  "amp-hulu": {
+    "prefix": "amp-hulu",
+    "description": "Displays a simple embedded Hulu video",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-hulu/ -->",
+      "<amp-hulu width=\"$1\" height=\"$2\" layout=\"${3:responsive}\" data-eid=\"$4\">",
+      "</amp-hulu>\n$0"
+    ]
+  },
+
+  "amp-iframe": {
+    "prefix": "amp-iframe",
+    "description": "Displays an iframe",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-iframe/ -->",
+      "<amp-iframe width=\"$1\" height=\"$2\"",
+      " sandbox=\"allow-scripts allow-same-origin\"",
+      " layout=\"responsive\"",
+      " frameborder=\"0\"",
+      " src=\"$3\">",
+      "</amp-iframe>\n$0"
+    ]
+  },
+
+  "amp-ima-video": {
+    "prefix": "amp-ima-video",
+    "description": "Embeds a video player for instream video ads that are integrated with the IMA SDK",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-ima-video/ -->",
+      "<amp-ima-video width=\"$1\" height=\"$2\" layout=\"${3:responsive}\" data-tag=\"$4\" data-poster=\"$5\">",
+      "  <source src=\"$6\" type=\"video/mp4\" />",
+      "  <source src=\"$7\" type=\"video/webm\" />",
+      "    <track label=\"$8\" kind=\"subtitles\" srclang=\"en\" src=\"${9:.vtt}\"/>",
+      "      <script type=\"application/json\">",
+      "        {",
+      "          \"locale\": \"en\",",
+      "          \"numRedirects\": $10",
+      "        }",
+      "      </script>",
+      "</amp-ima-video>\n$0"
+    ]
+  },
+
+  "amp-image-lightbox": {
+    "prefix": "amp-image-lightbox",
+    "description": "Provides a lightbox effect for a specified image",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-image-lightbox/ -->",
+      "<amp-image-lightbox id=\"${1:lightbox1}\"",
+      "  layout=\"nodisplay\"></amp-image-lightbox>",
+      "<amp-img on=\"tap:${1:lightbox1}\"",
+      "  role=\"button\"",
+      "  tabindex=\"0\"",
+      "  src=\"$2\"",
+      "  alt=\"$3\"",
+      "  title=\"$4\"",
+      "  layout=\"${5:responsive}\"",
+      "  width=\"$6\"",
+      "  height=\"$7\"></amp-img>\n$0"
+    ]
+  },
+
+  "amp-image-slider": {
+    "prefix": "amp-image-slider",
+    "description": "A slider to compare two images",
+    "body": [
+      "<amp-image-slider layout=\"${1:responsive}\" width=\"$2\" height=\"$3\" initial-slider-position=\"$4\" disable-hint-reappear>",
+      "  <amp-img src=\"$5\" alt=\"$6\"></amp-img>",
+      "  <amp-img src=\"$7\" alt=\"$8\"></amp-img>",
+      "  <div first>$9</div>",
+      "  <div second>$10</div>",
+      "</amp-image-slider>"
+    ]
+  },
+
+  "amp-img": {
+    "prefix": "amp-img",
+    "description": "AMP runtime-managed replacement for the HTML img tag",
+    "body": [
+      "<amp-img src=\"$1\"",
+      "  width=\"$2\"",
+      "  height=\"$3\"",
+      "  layout=\"${4:fill|fixed|fixed-height|flex-item|intrinsic|nodisplay|responsive}\"",
+      "  alt=\"$4\">",
+      "</amp-img>\n$0"
+    ]
+  },
+
+  "amp-imgur": {
+    "prefix": "amp-imgur",
+    "description": "Displays an Imgur post",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-imgur/ -->",
+      "<amp-imgur data-imgur-id=\"$1\"",
+      "  layout=\"${2:responsive}\"",
+      "  width=\"$3\"",
+      "  height=\"$4\">",
+      "</amp-imgur>\n$0"
+    ]
+  },
+
+  "amp-inputmask": {
+    "prefix": "amp-inputmask",
+    "description": "Provides input masking capabilities to inputs in AMP forms",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-inputmask/ -->",
+      "<input ",
+      "  type=\"${1:tel|text|search}\"",
+      "  mask=\"payment-card\"",
+      "  mask-output=\"$2\"",
+      "  placeholder=\"$3\" />\n$0"
+    ]
+  },
+
+  "amp-instagram": {
+    "prefix": "amp-instagram",
+    "description": "Displays an Instagram embed",
+    "body": [
+      "<amp-instagram",
+      "  data-shortcode=\"${1:fBwFP}\"",
+      "  data-captioned",
+      "  width=\"$2\"",
+      "  height=\"$3\"",
+      "  layout=\"${4:responsive}\">",
+      "</amp-instagram>\n$0"
+    ]
+  },
+
+  "amp-install-serviceworker": {
+    "prefix": "amp-install-serviceworker",
+    "description": "Installs a ServiceWorker for the current page",
+    "body": [
+      "<amp-install-serviceworker",
+      "  src=\"$1\"",
+      "  data-iframe-src=\"$2\"",
+      "  layout=\"nodisplay\">",
+      "</amp-install-serviceworker>\n$0"
+    ]
+  },
+
+  "amp-izlesene": {
+    "prefix": "amp-izlesene",
+    "description": "Displays an embedded Izlesene video",
+    "body": [
+      "<amp-izlesene",
+      "  data-videoid=\"$1\"",
+      "  width=\"$2\"",
+      "  height=\"$3\"",
+      "  layout=\"${4:nodisplay}\">",
+      "</amp-izlesene>\n$0"
+    ]
+  },
+
+  "amp-jwplayer": {
+    "prefix": "amp-jwplayer",
+    "description": "Displays a cloud-hosted JW Player",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-jwplayer/ -->",
+      "<amp-jwplayer",
+      "  data-player-id=\"$1\"",
+      "  data-media-id=\"$2\"",
+      "  layout=\"${3:responsive}\"",
+      "  width=\"$4\"",
+      "  height=\"$5\">",
+      "</amp-jwplayer>\n$0"
+    ]
+  },
+
+  "amp-kaltura-player": {
+    "prefix": "amp-kaltura-player",
+    "description": "Displays the Kaltura Player as used in Kaltura's Video Platform",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-kaltura-player/ -->",
+      "<amp-kaltura-player",
+      "  data-uiconf=\"$1\"",
+      "  data-partner=\"$2\"",
+      "  data-entryid=\"$3\"",
+      "  data-param-streamerType=\"$4\"",
+      "  layout=\"${5:responsive}\"",
+      "  width=\"$6\"",
+      "  height=\"$7\">",
+      "</amp-kaltura-player>\n$0"
+    ]
+  },
+
+  "amp-lightbox-gallery": {
+    "prefix": "amp-lightbox-gallery",
+    "description": "Provides a 'lightbox' experience. Upon user interaction, a UI component expands to fill the viewport until it is closed by the user",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-lightbox-gallery/ -->",
+      "<amp-carousel",
+      "  lightbox",
+      "  width=\"$1\"",
+      "  height=\"$2\"",
+      "  layout=\"${3:responsive}\"",
+      "  type=\"slides\">",
+      "  <amp-img src=\"$4\" width=\"$5\" height=\"$6\"></amp-img>",
+      "  <amp-img src=\"$7\" width=\"$8\" height=\"$9\"></amp-img>",
+      "  <amp-img src=\"$10\" width=\"$11\" height=\"$12\"></amp-img>",
+      "</amp-carousel>\n$0"
+    ]
+  },
+
+  "amp-lightbox": {
+    "prefix": "amp-lightbox",
+    "description": "Displays elements in a full-viewport “lightbox” modal",
+    "body": [
+      "<amp-lightbox id=\"$1\" layout=\"${2:nodisplay}\">",
+      "  <div class=\"$3\" on=\"${4:tap:my-lightbox.close}\" role=\"button\" tabindex=\"0\">",
+      "    <h1>$5</h1>",
+      "  </div>",
+      "</amp-lightbox>",
+      "<button on=\"${6:tap:my-lightbox}\">",
+      "  $7",
+      "</button>\n$0"
+    ]
+  },
+
+  "amp-link-rewriter": {
+    "prefix": "amp-link-rewriter",
+    "description": "Run link-rewriter inside AMP page",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-link-rewriter/-->",
+      "<amp-link-rewriter layout=\"nodisplay\">",
+      "  <script type=\"application/json\">",
+      "    {",
+      "      \"output\": \"$2\",",
+      "      \"section\": [",
+      "        \"#$3\",",
+      "         \"#$4\",",
+      "      ],",
+      "      \"attribute\": {",
+      "        \"href\": \"$5\",",
+      "        \"id\": \"$6\",",
+      "        \"class\": \"$7\",",
+      "         \"rel\": \"$8\",",
+      "      },",
+      "      \"vars\": {",
+      "          \"customerId\": \"$9\"",
+      "      }",
+      "   }",
+      "  </script>",
+      "</amp-link-rewriter>\n$0"
+    ]
+  },
+
+  "amp-list": {
+    "prefix": "amp-list",
+    "description": "Fetches content dynamically from a CORS JSON endpoint and renders it using a supplied template",
+    "body": [
+      "<amp-list layout=\"${1:fixed-height}\" height=\"$2\"",
+      "    src=\"$3\"",
+      "    binding=\"no\">",
+      "  <template type=\"amp-mustache\">",
+      "    <div><a href=\"{{$4}}\">{{$5}}</a></div>",
+      "  </template>",
+      "</amp-list>\n$0"
+    ]
+  },
+
+  "amp-live-list": {
+    "prefix": "amp-live-list",
+    "description": "A wrapper and minimal UI for content that updates live in the client instance as new content is available in the source document",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-live-list/ -->",
+      "<amp-live-list",
+      "  id=\"$1\"",
+      "  data-poll-interval=\"$2\"",
+      "  data-max-items-per-page=\"$3\">",
+      "  <button update on=\"tap:$1.update\">$4</button>",
+      "  <div items></div>",
+      "  <!-- pagination is optional -->",
+      "  <div pagination></div>",
+      "</amp-live-list>\n$0"
+    ]
+  },
+
+  "amp-mathml": {
+    "prefix": "amp-mathml",
+    "description": "",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-mathml/ -->",
+      "<amp-mathml",
+      " layout=\"${1:container}\"",
+      "  data-formula=\"$2\">",
+      "</amp-mathml>\n$0"
+    ]
+  },
+
+  "amp-mega-menu": {
+    "prefix": "amp-mega-menu",
+    "description": "[Experimental] activated by the amp-mega-menu experiment. Horizontal navigation bar with menu items that open/close content containers on click",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-mega-menu/ -->",
+      "<amp-mega-menu height=\"$1\" layout=\"${2:fixed-height}\">",
+      "  <nav>",
+      "    <ul>",
+      "      <li>",
+      "        <span role=\"button\">Image</span>",
+      "        <div role=\"dialog\">",
+      "          <amp-img",
+      "            src=\"$3\"",
+      "            width=\"$4\"",
+      "            height=\"$5\">",
+      "          </amp-img>",
+      "        </div>",
+      "      </li>",
+      "      <li>",
+      "        <span role=\"button\">$6</span>",
+      "        <div role=\"dialog\">",
+      "          <ol>",
+      "            <li>$7</li>",
+      "            <li>$8</li>",
+      "            <li>$9</li>",
+      "          </ol>",
+      "        </div>",
+      "      </li>",
+      "      <li>",
+      "        <a href=\"$10\">Link</a>",
+      "      </li>",
+      "    </ul>",
+      "  </nav>",
+      "</amp-mega-menu>\n$0"
+    ]
+  },
+
+  "amp-megaphone": {
+    "prefix": "amp-megaphone",
+    "description": "Displays a Megaphone.fm podcast episode or playlist",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-megaphone/ -->",
+      "<amp-megaphone",
+      "  height=\"$1\"",
+      "  layout=\"${2:fixed-height}\"",
+      "  data-episode=\"$3\"",
+      "  data-light>",
+      "</amp-megaphone>\n$0"
+    ]
+  },
+
+  "amp-minute-media-player": {
+    "prefix": "amp-minute-media-player",
+    "description": "An amp-minute-media-player component displays Minute Media player",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-minute-media-player/ -->",
+      "<amp-minute-media-player",
+      "  data-content-type=\"${1:curated}\"",
+      "  data-content-id=\"$2\"",
+      "  width=\"$3\"",
+      "  height=\"$4\"",
+      "  layout=\"${5:responsive}\"",
+      "  autoplay>",
+      "</amp-minute-media-player>\n$0"
+    ]
+  },
+
+  "amp-mowplayer": {
+    "prefix": "amp-mowplayer",
+    "description": "Displays a cloud-hosted Mow Player",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-mowplayer/ -->",
+      "<amp-mowplayer",
+      "  data-mediaid=\"$1\"",
+      "  layout=\"${2:responsive}\"",
+      "  width=\"$3\"",
+      "  height=\"$4\">",
+      "</amp-mowplayer>\n$0"
+    ]
+  },
+
+  "amp-mustache": {
+    "prefix": "amp-mustache",
+    "description": "Allows rendering of Mustache.js",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-mustache/ -->",
+      "<template type=\"amp-mustache\">",
+      "  $2",
+      "</template>\n$0"
+    ]
+  },
+
+  "amp-nested-menu": {
+    "prefix": "amp-nested-menu",
+    "description": "[Experimental] activated by the amp-nested-menu experiment. Drilldown menu component with items that open nested submenus on tap",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-nested-menu/ -->",
+      "<amp-sidebar id=\"$1\" layout=\"nodisplay\" style=\"width:$3px\">",
+      "  <amp-nested-menu layout=\"${4:fill}\">",
+      "    <ul>",
+      "      <li>",
+      "        <h4 amp-nested-submenu-open>$5</h4>",
+      "        <div amp-nested-submenu>",
+      "          <ul>",
+      "            <li>",
+      "             <h4 amp-nested-submenu-close>$6</h4>",
+      "            </li>",
+      "            <li>",
+      "              <h4 amp-nested-submenu-open>$7</h4>",
+      "              <div amp-nested-submenu>",
+      "                <h4 amp-nested-submenu-close>$8</h4>",
+      "                <amp-img",
+      "                  src=\"$9\"",
+      "                  layout=\"${10:responsive}\"",
+      "                  width=\"$11\"",
+      "                  height=\"$12\">",
+      "                </amp-img>",
+      "              </div>",
+      "            </li>",
+      "          </ul>",
+      "        </div>",
+      "      </li>",
+      "      <li>",
+      "      <a href=\"$13\">$</a>",
+      "      </li>",
+      "    </ul>",
+      "  </amp-nested-menu>",
+      "</amp-sidebar>\n$0"
+    ]
+  },
+
+  "amp-next-page": {
+    "prefix": "amp-next-page",
+    "description": "Dynamically loads more documents recommended for the user",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-next-page/ -->",
+      "<amp-next-page ",
+      "  src=\"$1\">",
+      "</amp-next-page>\n$0"
+    ]
+  },
+
+  "amp-nexxtv-player": {
+    "prefix": "amp-nexxtv-player",
+    "description": "Displays a media stream from the nexxOMNIA platform",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-nexxtv-player/ -->",
+      "<amp-nexxtv-player",
+      "  data-mediaid=\"$1\"",
+      "  data-client=\"$2\"",
+      "  data-streamtype=\"video\"",
+      "  data-seek-to=\"2\"",
+      "  data-mode=\"static\"",
+      "  data-origin=\"$5\"",
+      "  data-disable-ads=\"1\"",
+      "  data-streaming-filter=\"nxp-bitrate-2500\"",
+      "  layout=\"${8:responsive}\"",
+      "  width=\"$9\"",
+      "  height=\"$10\">",
+      "</amp-nexxtv-player>\n$0"
+    ]
+  },
+
+  "amp-o2-player": {
+    "prefix": "amp-o2-player",
+    "description": "Displays an AOL O2Player",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-o2-player/ -->",
+      "<amp-o2-player",
+      "  data-pid=\"$1\"",
+      "  data-bcid=\"$2\"",
+      "  data-bid=\"$3\"",
+      "  data-vid=\"$4\"",
+      "  layout=\"${5:responsive}\"",
+      "  width=\"$6\"",
+      "  height=\"$7\">",
+      "</amp-o2-player>\n$0"
+    ]
+  },
+
+  "amp-ooyala-player": {
+    "prefix": "amp-ooyala-player",
+    "description": "Displays an Ooyala video",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-ooyala-player/ -->",
+      "<amp-ooyala-player",
+      "  data-embedcode=\"$1\"",
+      "  data-pcode=\"$2\"",
+      "  data-playerid=\"$3\"",
+      "  layout=\"${4:responsive}\"",
+      "  width=\"$5\"",
+      "  height=\"$6\">",
+      "</amp-ooyala-player>\n$0"
+    ]
+  },
+
+  "amp-orientation-observer": {
+    "prefix": "amp-orientation-observer",
+    "description": "Monitors the orientation of an element within the viewport as a user scrolls, and dispatches events that can be used with other AMP components",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-orientation-observer/ -->",
+      "<amp-orientation-observer",
+      "  on=\"$1\"",
+      "  layout=\"${2:nodisplay}\">",
+      "</amp-orientation-observer>\n$0"
+    ]
+  },
+
+  "amp-pan-zoom": {
+    "prefix": "amp-pan-zoom",
+    "description": "Provides zooming and panning for arbitrary content",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-pan-zoom/ -->",
+      "<amp-layout",
+      "  layout=\"${1:responsive}\"",
+      "  width=\"$2\"",
+      "  height=\"$3\">",
+      "  <amp-pan-zoom layout=\"fill\">",
+      "    <svg>",
+      "      ",
+      "    </svg>",
+      "  </amp-pan-zoom>",
+      "</amp-layout>\n$0"
+    ]
+  },
+
+  "amp-pinterest": {
+    "prefix": "amp-pinterest",
+    "description": "Displays a Pinterest widget or Save button",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-pinterest/ -->",
+      "<amp-pinterest",
+      "  height=\"$1\"",
+      "  width=\"$2\"",
+      "  data-do=\"$3\"",
+      "  data-url=\"$4\"",
+      "  data-media=\"$5\"",
+      "  data-description=\"$6\">",
+      "</amp-pinterest>\n$0"
+    ]
+  },
+
+  "amp-pixel": {
+    "prefix": "amp-pixel",
+    "description": "A tracking pixel to count page views",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-pixel/ -->",
+      "<amp-pixel",
+      "  src=\"$1\"",
+      "  layout=\"nodisplay\"",
+      "  referrerpolicy=\"no-referrer\">",
+      "</amp-pixel>\n$0"
+    ]
+  },
+
+  "amp-playbuzz": {
+    "prefix": "amp-playbuzz",
+    "description": "Displays any Playbuzz content (e.g., list, poll, etc.)",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-playbuzz/ -->",
+      "<amp-playbuzz",
+      "  src=\"$1\"",
+      "  height=\"$2\"",
+      "  data-item-info=\"${3:true}\"",
+      "  data-share-buttons=\"${4:true}\"",
+      "  data-comments=\"${5:true}\">",
+      "</amp-playbuzz>\n$0"
+    ]
+  },
+
+  "amp-position-observer": {
+    "prefix": "amp-position-observer",
+    "description": "Monitors the orientation of an element within the viewport as a user scrolls, and dispatches events that can be used with other AMP components",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-position-observer/ -->",
+      "<amp-position-observer",
+      "  intersection-ratios=\"$1\"",
+      "  on=\"scroll:$2.seekTo(percent=event.percent)\"",
+      "  layout=\"nodisplay\">",
+      "</amp-position-observer>\n$0"
+    ]
+  },
+
+  "amp-powr-player": {
+    "prefix": "amp-powr-player",
+    "description": "An amp-powr-player component displays the Powr Player as configured in the Powr platform",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-powr-player/ -->",
+      "<amp-powr-player",
+      "  data-account=\"$1\"",
+      "  data-video=\"$2\"",
+      "  data-player=\"$3\"",
+      "  layout=\"${4:responsive}\"",
+      "  height=\"$5\"",
+      "  width=\"$6\">",
+      "</amp-powr-player>\n$0"
+    ]
+  },
+
+  "amp-reach-player": {
+    "prefix": "amp-reach-player",
+    "description": "Displays a Beachfront Reach video player",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-reach-player/ -->",
+      "<amp-reach-player",
+      "  data-embed-id=\"default\"",
+      "  layout=\"${2:responsive}\"",
+      "  width=\"$3\"",
+      "  height=\"$4\">",
+      "</amp-reach-player>\n$0"
+    ]
+  },
+
+  "amp-recaptcha-input": {
+    "prefix": "amp-recaptcha-input",
+    "description": "Appends a reCAPTCHA v3 token to AMP form submissions",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-recaptcha-input/ -->",
+      "<amp-recaptcha-input",
+      "  layout=\"nodisplay\"",
+      "  name=\"$1\"",
+      "  data-sitekey=\"$2\"",
+      "  data-action=\"$3\">",
+      "</amp-recaptcha-input>\n$0"
+    ]
+  },
+
+  "amp-redbull-player": {
+    "prefix": "amp-redbull-player",
+    "description": "Displays an Red Bull video",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-redbull-player/ -->",
+      "<amp-redbull-player",
+      "  id=\"$1\"",
+      "  data-param-videoid=\"$2\"",
+      "  data-param-skinid=\"$3\"",
+      "  data-param-locale=\"$4\"",
+      "  height=\"$5\"",
+      "  width=\"$6\">",
+      "</amp-redbull-player>\n$0"
+    ]
+  },
+
+  "amp-reddit": {
+    "prefix": "amp-reddit",
+    "description": "Displays a Reddit comment or post embed",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-reddit/ -->",
+      "<amp-reddit",
+      "  data-src=\"$1\"",
+      "  data-embedtype=\"${2:post|comment}\"",
+      "  layout=\"${3:responsive}\"",
+      "  height=\"$4\"",
+      "  width=\"$5\">",
+      "</amp-reddit>\n$0"
+    ]
+  },
+
+  "amp-riddle-quiz": {
+    "prefix": "amp-riddle-quiz",
+    "description": "Displays Riddle content (e.g., quiz, list, poll, etc.)",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-riddle-quiz/ -->",
+      "<amp-riddle-quiz",
+      "  data-riddle-id=\"$1\"",
+      "  layout=\"responsive\"",
+      "  height=\"$2\"",
+      "  width=\"$3\">",
+      "</amp-riddle-quiz>\n$0"
+    ]
+  },
+
+  "amp-script": {
+    "prefix": "amp-script",
+    "description": "Allows running custom JavaScript to render UI",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-script/ -->",
+      "<amp-script",
+      "  layout=\"${1:container}\"",
+      "  src=\"$2\">",
+      "  <button></button>",
+      "</amp-script>\n$0"
+    ]
+  },
+
+  "amp-selector": {
+    "prefix": "amp-selector",
+    "description": "Represents a control that presents a menu of options and lets the user choose from it",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-selector/ -->",
+      "<amp-selector",
+      "  layout=\"${1:container}\"",
+      "  class=\"$2\"",
+      "  ${3:multiple}>",
+      "  <div option=\"$3\" selected></div>",
+      "  <div option=\"$4\"></div>",
+      "  <div option=\"$5\"></div>",
+      "</amp-selector>\n$0"
+    ]
+  },
+
+  "amp-sidebar": {
+    "prefix": "amp-sidebar",
+    "description": "Provides a way to display meta content intended for temporary access such as navigation, links, buttons, menus",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-sidebar/ -->",
+      "<amp-sidebar id=\"$1\" class=\"$2\" layout=\"${3:nodisplay}\" side=\"${4:left}\">",
+      "  <h3>$5</h3>",
+      "  <button on=\"tap:$1.close\">$5</button>",
+      "  <nav>",
+      "    <ul>",
+      "      <li>$6</li>",
+      "      <li>$7</li>",
+      "      <li>$8</li>",
+      "    </ul>",
+      "  </nav>",
+      "</amp-sidebar>",
+      "<button on=\"tap:$1.toggle\">$9</button>\n$0"
+    ]
+  },
+
+  "amp-skimlinks": {
+    "prefix": "amp-skimlinks",
+    "description": "Run skimlinks inside your AMP page",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-skimlinks/ -->",
+      "<amp-skimlinks",
+      "  layout=\"${1:nodisplay}\"",
+      "  publisher-code=\"$2\">",
+      "</amp-skimlinks>\n$0"
+    ]
+  },
+
+  "amp-smartlinks": {
+    "prefix": "amp-smartlinks",
+    "description": "Run Narrativ's Linkmate process inside your AMP page",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-smartlinks/ -->",
+      "<amp-smartlinks",
+      "  layout=\"${1:nodisplay}\"",
+      "  nrtv-account-name=\"$2\"",
+      "  linkmate>",
+      "</amp-smartlinks>\n$0"
+    ]
+  },
+
+  "amp-social-share": {
+    "prefix": "amp-social-share",
+    "description": "Displays a social share button",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-social-share/ -->",
+      "<amp-social-share",
+      "  type=\"$1\"",
+      "  data-param-text=\"$2\"",
+      "  data-param-url=\"$3\"",
+      "  height=\"$4\"",
+      "  width=\"$5\">",
+      "</amp-social-share>\n$0"
+    ]
+  },
+
+  "amp-soundcloud": {
+    "prefix": "amp-soundcloud",
+    "description": "Displays a Soundcloud clip",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-soundcloud/ -->",
+      "<amp-soundcloud",
+      "  layout=\"${1:responsive}\"",
+      "  data-trackid=\"$2\"",
+      "  data-visual=\"$3\"",
+      "  data-colir=\"$4\"",
+      "  height=\"$5\"",
+      "  width=\"$6\">",
+      "</amp-soundcloud>\n$0"
+    ]
+  },
+
+  "amp-springboard-player": {
+    "prefix": "amp-springboard-player",
+    "description": "Displays a Springboard Platform video player",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-springboard-player/ -->",
+      "<amp-springboard-player",
+      "  layout=\"${1:responsive}\"",
+      "  data-site-id=\"$2\"",
+      "  data-mode=\"$3\"",
+      "  data-content-id=\"$4\"",
+      "  data-player-id=\"$5\"",
+      "  data-domain=\"$6\"",
+      "  data-items=\"$7\"",
+      "  height=\"$8\"",
+      "  width=\"$9\">",
+      "</amp-springboard-player>\n$0"
+    ]
+  },
+
+  "amp-sticky-ad": {
+    "prefix": "amp-sticky-ad",
+    "description": "Provides a way to display and stick ad content at the bottom of the page",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-sticky-ad/ -->",
+      "<amp-sticky-ad layout=\"nodisplay\">",
+      "  <amp-ad",
+      "    data-slot=\"$6\"",
+      "    type=\"$7\"",
+      "    height=\"$8\"",
+      "    width=\"$9\">",
+      "  </amp-ad>",
+      "</amp-sticky-ad>\n$0"
+    ]
+  },
+
+  "amp-story-auto-ads": {
+    "prefix": "amp-story-auto-ads",
+    "description": "Dynamically inserts ads into a Story",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-story-auto-ads/ -->",
+      "<amp-story-auto-ads>",
+      "  <script type=\"application/json\">",
+      "    {",
+      "      \"ad-attributes\": {",
+      "        \"type\": \"$1\",",
+      "        \"data-slot\": \"$2\"",
+      "      }",
+      "    }",
+      "  </script>",
+      "</amp-story-auto-ads>\n$0"
+    ]
+  },
+
+  "amp-subscriptions-google": {
+    "prefix": "amp-subscriptions-google",
+    "description": "Implements subscription-style access protocol for Subscribe with Google",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-subscriptions-google/ -->",
+      "<script type=\"application/json\" id=\"amp-subscriptions\">",
+      "  {",
+      "    \"services\": [",
+      "      {",
+      "        \"authorizationUrl\": \"$1\",",
+      "        \"pingbackUrl\": \"$2\",",
+      "        \"actions\": {",
+      "          \"login\": \"$3\",",
+      "          \"subscribe\": \"$4\"",
+      "        }",
+      "      },",
+      "      {",
+      "        \"serviceId\": \"subscribe.google.com\"",
+      "      }",
+      "    ]",
+      "  }",
+      "</script>\n$0"
+    ]
+  },
+
+  "amp-story": {
+    "prefix": "amp-story",
+    "description": "A rich, visual storytelling format",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-story/ -->",
+      "<amp-story standalone title=\"${1:TITLE}\" publisher=\"${2:PUBLISHER-NAME}\" publisher-logo-src=\"${3:URL}\" poster-portrait-src=\"${4:POSTER-IMAGE-URL}\">",
+      "  <amp-story-page id=\"${5:STORY-PAGE-ID}\" >",
+      "    <amp-story-grid-layer template=\"${6:fill}\">",
+      "      <amp-img src=\"${7:IMAGE-URL}\" width=\"${8:900}\" height=\"${9:1600}\"></amp-img>",
+      "    </amp-story-grid-layer>",
+      "  </amp-story-page>",
+      "  <amp-story-bookend src=\"${10:data.json}\" layout=\"${11:nodisplay}\"></amp-story-bookend>",
+      "</amp-story>"
+    ]
+  },
+
+  "amp-story-page": {
+    "prefix": "amp-story-page",
+    "description": "amp-story-page custom component. Requires within amp-story component and amp-story script in the HEAD section",
+    "body": [
+      "<amp-story-page id=\"$1}\" auto-advance-after=\"${2:1s}\" background-audio=\"${3:AUTO-URL.mp3}\">",
+      "  <amp-story-grid-layer template=\"${4:fill}\">",
+      "    <amp-img src=\"${5:IMAGE-URL}\" width=\"${6:900}\" height=\"${7:1600}\"></amp-img>",
+      "  </amp-story-grid-layer>",
+      "</amp-story-page>"
+    ]
+  },
+
+  "amp-timeago": {
+    "prefix": "amp-timeago",
+    "description": "Provides fuzzy timestamps by formatting dates as 'time ago' (for example, 3 hours ago)",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-timeago/ -->",
+      "<amp-timeago",
+      "  layout=\"${1:fixed}\"",
+      "  datetime=\"$2\"",
+      "  locale=\"$3\"",
+      "  height=\"$4\"",
+      "  width=\"$5\">",
+      "  $6",
+      "</amp-timeago>\n$0"
+    ]
+  },
+
+  "amp-truncate-text": {
+    "prefix": "amp-truncate-text",
+    "description": "Truncates text with an ellipsis, optionally showing an overflow element",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-truncate-text/ -->",
+      "<amp-truncate-text",
+      "  layout=\"${1:fixed}\"",
+      "  height=\"$2\"",
+      "  width=\"$3\">",
+      "  $4",
+      "  <button slot=\"collapsed\">${5:See more}</button>",
+      "  <button slot=\"expanded\">${6:See less}</button>",
+      "</amp-truncate-text>\n$0"
+    ]
+  },
+
+  "amp-twitter": {
+    "prefix": "amp-twitter",
+    "description": "Provides fuzzy timestamps by formatting dates as 'time ago' (for example, 3 hours ago)",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-timeago/ -->",
+      "<amp-twitter",
+      "  layout=\"${1:fixed}\"",
+      "  data-tweetid=\"$2\"",
+      "  height=\"$3\"",
+      "  width=\"$4\">",
+      "</amp-twitter>\n$0"
+    ]
+  },
+
+  "amp-user-notification": {
+    "prefix": "amp-user-notification",
+    "description": "Displays a dismissable notification to the user",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-user-notification/ -->",
+      "<amp-user-notification",
+      "  layout=\"nodisplay\"",
+      "  id=\"$1\"",
+      "  data-show-if-href=\"$2\"",
+      "  data-dismiss-href=\"$3\">",
+      "  $4",
+      "  <a href=\"$5\">$6</a>",
+      "  <button on=\"tap:amp-user-$1.dismiss\">$7</button>",
+      "</amp-user-notification>\n$0"
+    ]
+  },
+
+  "amp-video-docking": {
+    "prefix": "amp-video-docking",
+    "description": "Functionality for videos that minimize ('dock') to a corner or a custom position on scroll",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-video-docking/ -->",
+      "<amp-video",
+      "  src=\"${1:FILE-NAME}.mp4\"",
+      "  height=\"$2\"",
+      "  width=\"$3\"",
+      "  dock>",
+      "</amp-video>\n$0"
+    ]
+  },
+
+  "amp-video-iframe": {
+    "prefix": "amp-video-iframe",
+    "description": "Include an amp-video-iframe on your AMP document",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-video-iframe/ -->",
+      "<amp-video-iframe",
+      "  layout=\"${1:responsive}\"",
+      "  src=\"$2\"",
+      "  poster=\"$3\"",
+      "  height=\"$8\"",
+      "  width=\"$9\">",
+      "</amp-video-iframe>\n$0"
+    ]
+  },
+
+  "amp-video": {
+    "prefix": "amp-video",
+    "description": "Replaces the HTML5 video tag",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-video/ -->",
+      "<amp-video",
+      "  controls",
+      "  layout=\"${1:responsive}\"",
+      "  poster=\"$2\"",
+      "  height=\"$3\"",
+      "  width=\"$4\">",
+      "  <source src=\"$5\"",
+      "    type=\"${6:video/webm}\" />",
+      "  <source src=\"$7\"",
+      "    type=\"${8:video/mp4}\" />",
+      "    <div fallback>",
+      "      <p>${9:This browser does not support the video element.}</p>",
+      "    </div>",
+      "</amp-video>\n$0"
+    ]
+  },
+
+  "amp-vimeo": {
+    "prefix": "amp-vimeo",
+    "description": "Displays a Vimeo video",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-vimeo/ -->",
+      "<amp-vimeo",
+      "  layout=\"${1:responsive}\"",
+      "  data-videoid=\"$2\"",
+      "  height=\"$3\"",
+      "  width=\"$4\"",
+      "  autoplay>",
+      "</amp-vimeo>\n$0"
+    ]
+  },
+
+  "amp-vine": {
+    "prefix": "amp-vine",
+    "description": "Displays a Vine simple embed",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-vine/ -->",
+      "<amp-vine",
+      "  layout=\"${1:responsive}\"",
+      "  data-vineid=\"$2\"",
+      "  height=\"$3\"",
+      "  width=\"$4\">",
+      "</amp-vine>\n$0"
+    ]
+  },
+
+  "amp-viqeo-player": {
+    "prefix": "amp-viqeo-player",
+    "description": "Displays a Viqeo video player",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-viqeo-player/ -->",
+      "<amp-viqeo-player",
+      "  layout=\"${1:responsive}\"",
+      "  data-videoid=\"$2\"",
+      "  data-profileid=\"$3\"",
+      "  height=\"$4\"",
+      "  width=\"$5\">",
+      "</amp-viqeo-player>\n$0"
+    ]
+  },
+
+  "amp-vk": {
+    "prefix": "amp-vk",
+    "description": "Embeds a VK post or poll widget",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-vk/ -->",
+      "<amp-vk",
+      "  layout=\"${1:responsive}\"",
+      "  data-embedtype=\"${2:post|poll}\"",
+      "  data-owner-id=\"$3\"",
+      "  data-post-id=\"$4\"",
+      "  data-hash=\"$5\"",
+      "  height=\"$6\"",
+      "  width=\"$7\">",
+      "</amp-vk>\n$0"
+    ]
+  },
+
+  "amp-web-push": {
+    "prefix": "amp-web-push",
+    "description": "Allows users to subscribe to web push notifications",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-web-push/ -->",
+      "<amp-web-push-widget",
+      "  layout=\"${1:responsive}\"",
+      "  visibility=\"$2\"",
+      "  height=\"$3\"",
+      "  width=\"$4\">",
+      "  <button on=\"tap:amp-web-push.subscribe\">Subscribe to Notifications</button>",
+      "</amp-web-push-widget>\n$0"
+    ]
+  },
+
+  "amp-wistia-player": {
+    "prefix": "amp-wistia-player",
+    "description": "Displays a Wistia video",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-wistia-player/ -->",
+      "<amp-wistia-player",
+      "  layout=\"${1:responsive}\"",
+      "  data-media-hashed-id=\"$2\"",
+      "  height=\"$3\"",
+      "  width=\"$4\">",
+      "</amp-wistia-player>\n$0"
+    ]
+  },
+
+  "amp-yotpo": {
+    "prefix": "amp-yotpo",
+    "description": "Embeds a Yotpo on-site widget",
+    "body": [
+      "<!-- Ref: https://amp.dev/documentation/components/amp-yotpo/ -->",
+      "<amp-yotpo",
+      "  layout=\"${1:responsive}\"",
+      "  data-app-key=\"$2\"",
+      "  data-widget-type=\"$3\"",
+      "  data-product-id=\"$4\"",
+      "  height=\"$5\"",
+      "  width=\"$6\">",
+      "</amp-yotpo>\n$0"
+    ]
+  },
+
+  "amp-youtube": {
+    "prefix": "amp-youtube",
+    "description": "Displays a YouTube video",
+    "body": [
+      "<amp-youtube",
+      "  width=\"$1\"",
+      "  height=\"$2\"",
+      "  layout=\"${3:responsive}\"",
+      "  data-videoid=\"$4\">",
+      "</amp-youtube>$0"
+    ]
+  }
+}
