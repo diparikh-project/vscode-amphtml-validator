@@ -12,8 +12,8 @@
     "url": "https://github.com/diparikh-project/vscode-amphtml-validator"
   },
   "dependencies": {
-    "vscode-languageserver": "^5.2.1",
-    "amphtml-validator": "1.0.31"
+    "amphtml-validator": "^1.0.35",
+    "vscode-languageserver": "^5.2.1"
   },
   "scripts": {}
 }

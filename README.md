@@ -14,7 +14,7 @@ Start typing amp- and the autocomplete will show available components and script
 
 This extension uses AMP validator available at:
 [AMP Validator](https://www.npmjs.com/package/amphtml-validator).
-This extension uses amphtml-validator version: **1.0.31**
+This extension uses amphtml-validator version: **1.0.35**
 
 Current implementation of amphtml-validator package fetches the latest version
 of validator.js from [CDN](https://cdn.ampproject.org/v0/validator.js), so
